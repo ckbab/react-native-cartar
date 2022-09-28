@@ -1,0 +1,53 @@
+{
+  "name": "@ckbab/react-native-cartar",
+  "version": "1.0.0",
+  "description": "React Native wrapper for cartar.io images.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier . --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix"
+  },
+  "dependencies": {
+    "@ckbab/js-utils": "^1.0.2",
+    "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.1",
+    "react-dom": ">=17.0.1",
+    "react-native": ">=0.64.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/eslint-parser": "^7.19.1",
+    "@ckbab/eslint-config": "1.0.11",
+    "babel-preset-expo": "^9.1.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-sort-destructure-keys": "^1.4.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "prettier": "^2.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckbab/react-native-cartar.git"
+  },
+  "keywords": [
+    "avatar",
+    "profile",
+    "picture",
+    "react-component"
+  ],
+  "author": "Marcus Christiansson <christiansson.marcus@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckbab/react-native-cartar/issues"
+  },
+  "homepage": "https://github.com/ckbab/react-native-cartar#readme"
+}
