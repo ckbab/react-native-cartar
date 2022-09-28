@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { Image } from "react-native";
+
 import useCartar from "../hooks/cartar";
 
 export default function Cartar({ size, style, ...rest }) {
@@ -9,7 +10,7 @@ export default function Cartar({ size, style, ...rest }) {
   const source = get({ size, ...rest });
 
   return (
-    <Image style={[{ width: size, height: size }, style]} source={source} />
+    <Image source={source} style={[{ height: size, width: size }, style]} />
   );
 }
 

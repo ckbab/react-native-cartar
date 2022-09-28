@@ -1,6 +1,5 @@
 import { createUrl } from "@ckbab/js-utils";
 import _ from "lodash";
-
 import { useCallback } from "react";
 
 export default function useCartar(defaultProps) {
