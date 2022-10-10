@@ -7,8 +7,11 @@ import Placeholder from "../images/placeholder.png";
 export default function Cartar({ size, style, ...rest }) {
   const { get } = useCartar();
 
-  // Fetch twice as big to get good quality.
-  const uri = get({ size: size * 2, ...rest });
+  // Fetch bigger images to get good quality. Fetch either 800px or 1200px to
+  // avoid new images being fetched when user changing component's size prop.
+  const fetchSize = size <= 300 ? 600 : 1200;
+
+  const uri = get({ size: fetchSize, ...rest });
 
   return (
     <Image

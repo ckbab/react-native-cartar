@@ -5,7 +5,7 @@ React Native wrapper for [cartar.io](https://cartar.io).
 ## Installation
 
 ```
-npm install @ckbab/react-native-cartar --save
+yarn add @ckbab/react-native-cartar
 ```
 
 ## Usage
@@ -28,19 +28,19 @@ const url = get({ size: 200, beard: 2, beardColor: 3, skinColor: 2, ... });
 
 ## Properties
 
-| Name            | Type                 | Values   | Default value                                                |
-| --------------- | -------------------- | -------- | ------------------------------------------------------------ |
-| `size`          | `number`             | 0 - 1200 | 400                                                          |
-| `hair`          | `number`             | 0 - 21   | 0 (bald)                                                     |
-| `eye`           | `number`             | 1 - 10   | 0                                                            |
-| `mouth`         | `number`             | 1 - 10   | 0                                                            |
-| `beard`         | `number`             | 1 - 10   | 0                                                            |
-| `shirt`         | `number`             | 1 - 12   | 1                                                            |
-| `shirtColor`    | `string`             | -        | ![](https://via.placeholder.com/16/0984e3/0984e3.png) 0984e3 |
-| `shirtColorAlt` | `string`             | -        | ![](https://via.placeholder.com/16/fefefe/fefefe.png) fefefe |
-| `skinColor`     | `number` or `string` | 1-8      | 1                                                            |
-| `hairColor`     | `number` or `string` | 1-10     | 1                                                            |
-| `beardColor`    | `number` or `string` | 1-7      | 1                                                            |
+| Name            | Type                 | Values     | Default value                                                  |
+| --------------- | -------------------- | ---------- | -------------------------------------------------------------- |
+| `size`          | `number`             | `0 - 1200` | `400`                                                          |
+| `hair`          | `number`             | `0 - 21`   | `0` (bald)                                                     |
+| `eye`           | `number`             | `1 - 10`   | `0`                                                            |
+| `mouth`         | `number`             | `1 - 10`   | `0`                                                            |
+| `beard`         | `number`             | `1 - 10`   | `0`                                                            |
+| `shirt`         | `number`             | `1 - 12`   | `1`                                                            |
+| `shirtColor`    | `string`             | -          | ![](https://via.placeholder.com/16/0984e3/0984e3.png) `0984e3` |
+| `shirtColorAlt` | `string`             | -          | ![](https://via.placeholder.com/16/fefefe/fefefe.png) `fefefe` |
+| `skinColor`     | `number` or `string` | `1-8`      | `1`                                                            |
+| `hairColor`     | `number` or `string` | `1-10`     | `1`                                                            |
+| `beardColor`    | `number` or `string` | `1-7`      | `1`                                                            |
 
 - `skinColor`, `hairColor` and `beardColor` supports both predefined colors (e.g. 3) or custom colors (e.g. `003300`).
 - All colors are written without the hexadecimal (#) for a cleaner URL.
