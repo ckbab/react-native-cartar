@@ -1,0 +1,74 @@
+import React, { useMemo } from "react";
+
+import Hair1 from "./Hair1";
+import Hair2 from "./Hair2";
+import Hair3 from "./Hair3";
+import Hair4 from "./Hair4";
+import Hair5 from "./Hair5";
+import Hair6 from "./Hair6";
+import Hair7 from "./Hair7";
+import Hair8 from "./Hair8";
+import Hair9 from "./Hair9";
+import Hair10 from "./Hair10";
+import Hair11 from "./Hair11";
+import Hair12 from "./Hair12";
+import Hair13 from "./Hair13";
+import Hair14 from "./Hair14";
+import Hair15 from "./Hair15";
+import Hair16 from "./Hair16";
+import Hair17 from "./Hair17";
+import Hair18 from "./Hair18";
+import Hair19 from "./Hair19";
+import Hair20 from "./Hair20";
+import Hair21 from "./Hair21";
+
+export default function Hair({
+  borderColor2,
+  hairColor1,
+  hairColor2,
+  hairColor3,
+  type,
+}) {
+  const components = useMemo(
+    () => [
+      null,
+      Hair1,
+      Hair2,
+      Hair3,
+      Hair4,
+      Hair5,
+      Hair6,
+      Hair7,
+      Hair8,
+      Hair9,
+      Hair10,
+      Hair11,
+      Hair12,
+      Hair13,
+      Hair14,
+      Hair15,
+      Hair16,
+      Hair17,
+      Hair18,
+      Hair19,
+      Hair20,
+      Hair21,
+    ],
+    []
+  );
+
+  const Component = components[type];
+
+  if (!Component) {
+    return null;
+  }
+
+  return (
+    <Component
+      borderColor2={borderColor2}
+      hairColor1={hairColor1}
+      hairColor2={hairColor2}
+      hairColor3={hairColor3}
+    />
+  );
+}
