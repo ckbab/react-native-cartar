@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 
+import { defaultColor } from "../../constants/colors";
 import Hair1 from "./Hair1";
 import Hair2 from "./Hair2";
 import Hair3 from "./Hair3";
@@ -31,7 +32,6 @@ export default function Hair({
 }) {
   const components = useMemo(
     () => [
-      null,
       Hair1,
       Hair2,
       Hair3,
@@ -57,7 +57,7 @@ export default function Hair({
     []
   );
 
-  const Component = components[type];
+  const Component = components[type - 1];
 
   if (!Component) {
     return null;

@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 
+import { defaultColor } from "../../constants/colors";
 import Beard1 from "./Beard1";
 import Beard2 from "./Beard2";
 import Beard3 from "./Beard3";
@@ -14,7 +15,6 @@ import Beard10 from "./Beard10";
 export default function Beard({ beardColor1, beardColor2, type }) {
   const components = useMemo(
     () => [
-      null,
       Beard1,
       Beard2,
       Beard3,
@@ -29,9 +29,13 @@ export default function Beard({ beardColor1, beardColor2, type }) {
     []
   );
 
-  const Component = components[type];
+  const Component = components[type - 1];
 
   if (!Component) {
+    return null;
+  }
+
+  if (beardColor2 === defaultColor) {
     return null;
   }
 

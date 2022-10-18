@@ -28,22 +28,21 @@ const url = get({ size: 200, beard: 2, beardColor: 3, skinColor: 2, ... });
 
 ## Properties
 
-| Name            | Type                 | Values     | Default value                                                  |
-| --------------- | -------------------- | ---------- | -------------------------------------------------------------- |
-| `size`          | `number`             | `0 - 1200` | `400`                                                          |
-| `hair`          | `number`             | `0 - 21`   | `0` (bald)                                                     |
-| `eye`           | `number`             | `1 - 10`   | `0`                                                            |
-| `mouth`         | `number`             | `1 - 10`   | `0`                                                            |
-| `beard`         | `number`             | `1 - 10`   | `0`                                                            |
-| `shirt`         | `number`             | `1 - 12`   | `1`                                                            |
-| `shirtColor`    | `string`             | -          | ![](https://via.placeholder.com/16/0984e3/0984e3.png) `0984e3` |
-| `shirtColorAlt` | `string`             | -          | ![](https://via.placeholder.com/16/fefefe/fefefe.png) `fefefe` |
-| `skinColor`     | `number` or `string` | `1-8`      | `1`                                                            |
-| `hairColor`     | `number` or `string` | `1-10`     | `1`                                                            |
-| `beardColor`    | `number` or `string` | `1-7`      | `1`                                                            |
+| Name            | Type                 | Values   | Default value                                                |
+| --------------- | -------------------- | -------- | ------------------------------------------------------------ |
+| `size`          | `number`             | -        | `100`                                                        |
+| `hair`          | `number`             | `0 - 21` | `0`                                                          |
+| `eye`           | `number`             | `0 - 10` | `0`                                                          |
+| `mouth`         | `number`             | `0 - 10` | `0`                                                          |
+| `beard`         | `number`             | `0 - 10` | `0`                                                          |
+| `shirt`         | `number`             | `0 - 12` | `0`                                                          |
+| `shirtColor`    | `string`             | -        | ![](https://via.placeholder.com/16/0984e3/0984e3.png) `#999` |
+| `shirtColorAlt` | `string`             | -        | ![](https://via.placeholder.com/16/fefefe/fefefe.png) `#666` |
+| `skinColor`     | `number` or `string` | `0-8`    | `0`                                                          |
+| `hairColor`     | `number` or `string` | `0-10`   | `0`                                                          |
+| `beardColor`    | `number` or `string` | `0-10`   | `0`                                                          |
 
-- `skinColor`, `hairColor` and `beardColor` supports both predefined colors (e.g. 3) or custom colors (e.g. `003300`).
-- All colors are written without the hexadecimal (#) for a cleaner URL.
+- `skinColor`, `hairColor` and `beardColor` supports both predefined colors (e.g. 3) or custom colors (e.g. `#cc00ff`).
 
 ## Default colors
 
@@ -51,15 +50,14 @@ const url = get({ size: 200, beard: 2, beardColor: 3, skinColor: 2, ... });
 
 | Value | Hex code  | Example                                               |
 | ----- | --------- | ----------------------------------------------------- |
-| 1     | `#fefefe` | ![](https://via.placeholder.com/16/fefefe/fefefe.png) |
-| 2     | `#ffdbac` | ![](https://via.placeholder.com/16/ffdbac/ffdbac.png) |
-| 3     | `#f1c27d` | ![](https://via.placeholder.com/16/f1c27d/f1c27d.png) |
-| 4     | `#e0ac69` | ![](https://via.placeholder.com/16/e0ac69/e0ac69.png) |
-| 5     | `#c68642` | ![](https://via.placeholder.com/16/c68642/c68642.png) |
-| 6     | `#8d5524` | ![](https://via.placeholder.com/16/8d5524/8d5524.png) |
-| 7     | `#83572e` | ![](https://via.placeholder.com/16/83572e/83572e.png) |
-| 8     | `#624125` | ![](https://via.placeholder.com/16/624125/624125.png) |
-| 9     | `#422d1b` | ![](https://via.placeholder.com/16/422d1b/422d1b.png) |
+| 1     | `#ffdbac` | ![](https://via.placeholder.com/16/ffdbac/ffdbac.png) |
+| 2     | `#f1c27d` | ![](https://via.placeholder.com/16/f1c27d/f1c27d.png) |
+| 3     | `#e0ac69` | ![](https://via.placeholder.com/16/e0ac69/e0ac69.png) |
+| 4     | `#c68642` | ![](https://via.placeholder.com/16/c68642/c68642.png) |
+| 5     | `#8d5524` | ![](https://via.placeholder.com/16/8d5524/8d5524.png) |
+| 6     | `#83572e` | ![](https://via.placeholder.com/16/83572e/83572e.png) |
+| 7     | `#624125` | ![](https://via.placeholder.com/16/624125/624125.png) |
+| 8     | `#422d1b` | ![](https://via.placeholder.com/16/422d1b/422d1b.png) |
 
 ### Hair
 
@@ -78,4 +76,4 @@ const url = get({ size: 200, beard: 2, beardColor: 3, skinColor: 2, ... });
 
 ### Beard
 
-The color is based on the `skinColor` value where 1 is light colored beard and 7 is dark colored beard.
+The color is based on the `skinColor` value where 1 is light colored beard and 10 is dark colored beard.

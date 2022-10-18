@@ -21,7 +21,6 @@ export default function Mouth({
 }) {
   const components = useMemo(
     () => [
-      null,
       Mouth1,
       Mouth2,
       Mouth3,
@@ -36,7 +35,7 @@ export default function Mouth({
     []
   );
 
-  const Component = components[type];
+  const Component = components[type - 1];
 
   if (!Component) {
     return null;

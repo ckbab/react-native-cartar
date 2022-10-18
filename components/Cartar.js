@@ -1,8 +1,17 @@
-import { changeColor } from "@ckbab/js-utils";
+import { changeColor, isColor } from "@ckbab/js-utils";
 import PropTypes from "prop-types";
 import React, { useCallback, useMemo } from "react";
 import { Svg } from "react-native-svg";
 
+import {
+  defaultColor,
+  defaultHairColors,
+  defaultSkinColors,
+  insideBorderColor,
+  outsideBorderColor,
+  teethColor,
+  tongueColor,
+} from "../constants/colors";
 import Beard from "./beard/Beard";
 import Border from "./border/Border";
 import Eye from "./eye/Eye";
@@ -26,77 +35,38 @@ export default function Cartar({
   skinColor,
   style,
 }) {
-  const getBeardColor = useCallback(
-    (color, skinColor) => {
-      if (isColor(color)) {
-        return color;
-      }
+  const getBeardColor = useCallback((color, skinColor) => {
+    if (isColor(color)) {
+      return color;
+    }
 
-      return changeColor(skinColor, "#000", 1 - color / 10);
-    },
-    [isColor]
-  );
+    const opacity = Math.min(1, Math.max(0, 1 - color / 10));
 
-  const getDefaultColor = useCallback(
-    (color, defaultColors) => {
-      if (isColor(color)) {
-        return color;
-      }
+    return changeColor(skinColor, "#000", opacity);
+  }, []);
 
-      if (defaultColors[color]) {
-        return "#" + defaultColors[color];
-      }
+  const getDefaultColor = useCallback((color, defaultColors) => {
+    if (isColor(color)) {
+      return color;
+    }
 
-      return "#" + defaultColors[0];
-    },
-    [isColor]
-  );
+    if (defaultColors[color - 1]) {
+      return defaultColors[color - 1];
+    }
 
-  const isColor = useCallback((color) => /^#?[a-f0-9]{6}$/i.test(color), []);
-
-  const defaultHairColors = useMemo(
-    () => [
-      "f2e7c7",
-      "f2e1ae",
-      "f2da91",
-      "debe99",
-      "aa8866",
-      "6d4730",
-      "4d2d1a",
-      "2d170e",
-      "121821",
-      "b06500",
-    ],
-    []
-  );
-
-  const defaultSkinColors = useMemo(
-    () => [
-      "fefefe",
-      "ffdbac",
-      "f1c27d",
-      "e0ac69",
-      "c68642",
-      "8d5524",
-      "83572e",
-      "624125",
-      "422d1b",
-    ],
-    []
-  );
+    return defaultColor;
+  }, []);
 
   const colors = useMemo(() => {
     const hairColorToUse = getDefaultColor(hairColor, defaultHairColors);
     const skinColorToUse = getDefaultColor(skinColor, defaultSkinColors);
     const beardColorToUse = getBeardColor(beardColor, skinColorToUse);
 
-    const tongueColor = "#f06288";
-
     return {
       beard1: changeColor(skinColorToUse, "#000", 0.9),
       beard2: beardColorToUse,
-      border1: "#fefefe",
-      border2: "#000000",
+      border1: outsideBorderColor,
+      border2: insideBorderColor,
       eye1: changeColor(skinColorToUse, "#000", 0.3),
       eye2: changeColor(skinColorToUse, "#000", 0.2),
       hair1: hairColorToUse,
@@ -109,15 +79,13 @@ export default function Cartar({
       shirt4: changeColor(shirtColorAlt, "#000", 0.9),
       skin1: skinColorToUse,
       skin2: changeColor(skinColorToUse, "#000", 0.9),
-      teeth: "#fefefe",
+      teeth: teethColor,
       tongue1: tongueColor,
       tongue2: changeColor(tongueColor, "#000", 0.8),
       tongue3: changeColor(tongueColor, "#fff", 0.8),
     };
   }, [
     beardColor,
-    defaultHairColors,
-    defaultSkinColors,
     getBeardColor,
     getDefaultColor,
     hairColor,
@@ -178,32 +146,55 @@ export default function Cartar({
   );
 }
 
+const checkLimit =
+  (min, max, allowColor) => (props, propName, componentName) => {
+    const value = props[propName];
+    if (
+      value &&
+      (isNaN(value) || value < min || value > max) &&
+      !(allowColor && isColor(value))
+    ) {
+      return new Error(
+        `Prop '${propName}' supplied to '${componentName}' needs to be between ${min} and ${max}, got '${value}'.`
+      );
+    }
+  };
+
+const checkColor = (props, propName, componentName) => {
+  const value = props[propName];
+  if (!isColor(value)) {
+    return new Error(
+      `Prop '${propName}' supplied to '${componentName}' needs to a HEX color, got '${value}'.`
+    );
+  }
+};
+
 Cartar.propTypes = {
-  beard: PropTypes.number,
-  beardColor: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  eye: PropTypes.number,
-  hair: PropTypes.number,
-  hairColor: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  mouth: PropTypes.number,
-  shirt: PropTypes.number,
-  shirtColor: PropTypes.string,
-  shirtColorAlt: PropTypes.string,
+  beard: checkLimit(0, 10),
+  beardColor: checkLimit(0, 10, true),
+  eye: checkLimit(0, 10),
+  hair: checkLimit(0, 21),
+  hairColor: checkLimit(0, 10, true),
+  mouth: checkLimit(0, 10),
+  shirt: checkLimit(0, 12),
+  shirtColor: checkColor,
+  shirtColorAlt: checkColor,
   size: PropTypes.number,
-  skinColor: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  skinColor: checkLimit(0, 8, true),
   style: PropTypes.any,
 };
 
 Cartar.defaultProps = {
   beard: 0,
-  beardColor: "",
+  beardColor: 0,
   eye: 0,
   hair: 0,
-  hairColor: "",
+  hairColor: 0,
   mouth: 0,
-  shirt: 1,
-  shirtColor: "",
-  shirtColorAlt: "",
+  shirt: 0,
+  shirtColor: "#999",
+  shirtColorAlt: "#666",
   size: 100,
-  skinColor: "",
+  skinColor: 0,
   style: {},
 };

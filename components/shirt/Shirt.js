@@ -23,7 +23,6 @@ export default function Shirt({
 }) {
   const components = useMemo(
     () => [
-      null,
       Shirt1,
       Shirt2,
       Shirt3,
@@ -40,11 +39,8 @@ export default function Shirt({
     []
   );
 
-  const Component = components[type];
-
-  if (!Component) {
-    return null;
-  }
+  // Note we use Shirt1 as default since we always want to show a shirt.
+  const Component = components[type - 1] || Shirt1;
 
   return (
     <Component

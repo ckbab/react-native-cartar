@@ -52,6 +52,7 @@ export default function Border({ borderColor1, type }) {
     []
   );
 
+  // Note we do not use - 1 here since.
   const Component = components[type];
 
   if (!Component) {
