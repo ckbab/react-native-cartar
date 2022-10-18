@@ -146,19 +146,18 @@ export default function Cartar({
   );
 }
 
-const checkLimit =
-  (min, max, allowColor) => (props, propName, componentName) => {
-    const value = props[propName];
-    if (
-      value &&
-      (isNaN(value) || value < min || value > max) &&
-      !(allowColor && isColor(value))
-    ) {
-      return new Error(
-        `Prop '${propName}' supplied to '${componentName}' needs to be between ${min} and ${max}, got '${value}'.`
-      );
-    }
-  };
+const checkLimit = (max, allowColor) => (props, propName, componentName) => {
+  const value = props[propName];
+  if (
+    value &&
+    (isNaN(value) || value < 0 || value > max) &&
+    !(allowColor && isColor(value))
+  ) {
+    return new Error(
+      `Prop '${propName}' supplied to '${componentName}' needs to be between 0 and ${max}, got '${value}'.`
+    );
+  }
+};
 
 const checkColor = (props, propName, componentName) => {
   const value = props[propName];
@@ -170,17 +169,17 @@ const checkColor = (props, propName, componentName) => {
 };
 
 Cartar.propTypes = {
-  beard: checkLimit(0, 10),
-  beardColor: checkLimit(0, 10, true),
-  eye: checkLimit(0, 10),
-  hair: checkLimit(0, 21),
-  hairColor: checkLimit(0, 10, true),
-  mouth: checkLimit(0, 10),
-  shirt: checkLimit(0, 12),
+  beard: checkLimit(10),
+  beardColor: checkLimit(10, true),
+  eye: checkLimit(10),
+  hair: checkLimit(21),
+  hairColor: checkLimit(10, true),
+  mouth: checkLimit(10),
+  shirt: checkLimit(12),
   shirtColor: checkColor,
   shirtColorAlt: checkColor,
   size: PropTypes.number,
-  skinColor: checkLimit(0, 8, true),
+  skinColor: checkLimit(8, true),
   style: PropTypes.any,
 };
 

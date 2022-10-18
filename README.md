@@ -18,21 +18,21 @@ import Cartar from "@ckbab/react-native-cartar";
 
 ## Properties
 
-| Name            | Type                 | Values   | Default value                                                |
-| --------------- | -------------------- | -------- | ------------------------------------------------------------ |
-| `size`          | `number`             | -        | `100`                                                        |
-| `hair`          | `number`             | `0 - 21` | `0`                                                          |
-| `eye`           | `number`             | `0 - 10` | `0`                                                          |
-| `mouth`         | `number`             | `0 - 10` | `0`                                                          |
-| `beard`         | `number`             | `0 - 10` | `0`                                                          |
-| `shirt`         | `number`             | `0 - 12` | `0`                                                          |
-| `shirtColor`    | `string`             | -        | ![](https://via.placeholder.com/16/0984e3/0984e3.png) `#999` |
-| `shirtColorAlt` | `string`             | -        | ![](https://via.placeholder.com/16/fefefe/fefefe.png) `#666` |
-| `skinColor`     | `number` or `string` | `0-8`    | `0`                                                          |
-| `hairColor`     | `number` or `string` | `0-10`   | `0`                                                          |
-| `beardColor`    | `number` or `string` | `0-10`   | `0`                                                          |
+| Name            | Type                 | Values   | Default value                                          |
+| --------------- | -------------------- | -------- | ------------------------------------------------------ |
+| `size`          | `number`             | -        | `100`                                                  |
+| `hair`          | `number`             | `0 - 21` | `0`                                                    |
+| `eye`           | `number`             | `0 - 10` | `0`                                                    |
+| `mouth`         | `number`             | `0 - 10` | `0`                                                    |
+| `beard`         | `number`             | `0 - 10` | `0`                                                    |
+| `shirt`         | `number`             | `0 - 12` | `0`                                                    |
+| `shirtColor`    | `string`             | -        | ![](https://via.placeholder.com/16/999/999.png) `#999` |
+| `shirtColorAlt` | `string`             | -        | ![](https://via.placeholder.com/16/666/666.png) `#666` |
+| `skinColor`     | `number` or `string` | `0-8`    | `0`                                                    |
+| `hairColor`     | `number` or `string` | `0-10`   | `0`                                                    |
+| `beardColor`    | `number` or `string` | `0-10`   | `0`                                                    |
 
-- `skinColor`, `hairColor` and `beardColor` supports both predefined colors (e.g. 3) or custom colors (e.g. `#cc00ff`).
+Note that `skinColor`, `hairColor` and `beardColor` support both predefined colors (e.g. 3) or custom colors (e.g. `#cc00ff`).
 
 ## Default colors
 
