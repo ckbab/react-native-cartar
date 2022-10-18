@@ -14,16 +14,6 @@ yarn add @ckbab/react-native-cartar
 import Cartar from "@ckbab/react-native-cartar";
 
 <Cartar size={200} beard={2} beardColor={3} skinColor={2} ... />
-
-// Or if you want to use custom image component.
-
-import { useCartar } from "@ckbab/react-native-cartar";
-
-const { get } = useCartar();
-
-const url = get({ size: 200, beard: 2, beardColor: 3, skinColor: 2, ... });
-
-<CustomImage url={url} />
 ```
 
 ## Properties

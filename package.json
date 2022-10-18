@@ -7,8 +7,7 @@
     "format": "npx prettier . --write && npx eslint . --fix"
   },
   "dependencies": {
-    "@ckbab/js-utils": "^1.0.2",
-    "lodash": "^4.17.21"
+    "@ckbab/js-utils": "^1.0.5"
   },
   "peerDependencies": {
     "react": ">=17.0.1",
