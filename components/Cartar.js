@@ -62,6 +62,10 @@ export default function Cartar({
     const skinColorToUse = getDefaultColor(skinColor, defaultSkinColors);
     const beardColorToUse = getBeardColor(beardColor, skinColorToUse);
 
+    // Avoid shirt colors being null or undefined.
+    shirtColor = shirtColor || "#ddd";
+    shirtColorAlt = shirtColorAlt || "#aaa";
+
     return {
       beard1: changeColor(skinColorToUse, "#000", 0.9),
       beard2: beardColorToUse,
@@ -161,7 +165,7 @@ const checkLimit = (max, allowColor) => (props, propName, componentName) => {
 
 const checkColor = (props, propName, componentName) => {
   const value = props[propName];
-  if (!isColor(value)) {
+  if (value && !isColor(value)) {
     return new Error(
       `Prop '${propName}' supplied to '${componentName}' needs to a HEX color, got '${value}'.`
     );
@@ -191,8 +195,8 @@ Cartar.defaultProps = {
   hairColor: 0,
   mouth: 0,
   shirt: 0,
-  shirtColor: "#999",
-  shirtColorAlt: "#666",
+  shirtColor: "#ddd",
+  shirtColorAlt: "#aaa",
   size: 100,
   skinColor: 0,
   style: {},
