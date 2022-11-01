@@ -63,8 +63,8 @@ export default function Cartar({
     const beardColorToUse = getBeardColor(beardColor, skinColorToUse);
 
     // Avoid shirt colors being null or undefined.
-    shirtColor = shirtColor || "#ddd";
-    shirtColorAlt = shirtColorAlt || "#aaa";
+    const shirtColorToUse = shirtColor || "#ddd";
+    const shirtColorAltToUse = shirtColorAlt || "#aaa";
 
     return {
       beard1: changeColor(skinColorToUse, "#000", 0.9),
@@ -77,10 +77,10 @@ export default function Cartar({
       hair2: changeColor(hairColorToUse, "#fff", 0.9),
       hair3: changeColor(hairColorToUse, "#000", 0.9),
       mouth: changeColor(skinColorToUse, "#000", 0.6),
-      shirt1: shirtColor,
-      shirt2: changeColor(shirtColor, "#000", 0.9),
-      shirt3: shirtColorAlt,
-      shirt4: changeColor(shirtColorAlt, "#000", 0.9),
+      shirt1: shirtColorToUse,
+      shirt2: changeColor(shirtColorToUse, "#000", 0.9),
+      shirt3: shirtColorAltToUse,
+      shirt4: changeColor(shirtColorAltToUse, "#000", 0.9),
       skin1: skinColorToUse,
       skin2: changeColor(skinColorToUse, "#000", 0.9),
       teeth: teethColor,
@@ -125,6 +125,7 @@ export default function Cartar({
         skinColor1={colors.skin1}
         skinColor2={colors.skin2}
       />
+      <Eye eyeColor1={colors.eye1} eyeColor2={colors.eye2} type={eye} />
       <Hair
         borderColor2={colors.border2}
         hairColor1={colors.hair1}
@@ -132,7 +133,6 @@ export default function Cartar({
         hairColor3={colors.hair3}
         type={hair}
       />
-      <Eye eyeColor1={colors.eye1} eyeColor2={colors.eye2} type={eye} />
       <Beard
         beardColor1={colors.beard1}
         beardColor2={colors.beard2}
@@ -176,7 +176,7 @@ Cartar.propTypes = {
   beard: checkLimit(10),
   beardColor: checkLimit(10, true),
   eye: checkLimit(10),
-  hair: checkLimit(21),
+  hair: checkLimit(27),
   hairColor: checkLimit(10, true),
   mouth: checkLimit(10),
   shirt: checkLimit(12),

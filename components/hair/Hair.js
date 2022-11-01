@@ -1,6 +1,5 @@
 import React, { useMemo } from "react";
 
-import { defaultColor } from "../../constants/colors";
 import Hair1 from "./Hair1";
 import Hair2 from "./Hair2";
 import Hair3 from "./Hair3";
@@ -22,6 +21,12 @@ import Hair18 from "./Hair18";
 import Hair19 from "./Hair19";
 import Hair20 from "./Hair20";
 import Hair21 from "./Hair21";
+import Hair22 from "./Hair22";
+import Hair23 from "./Hair23";
+import Hair24 from "./Hair24";
+import Hair25 from "./Hair25";
+import Hair26 from "./Hair26";
+import Hair27 from "./Hair27";
 
 export default function Hair({
   borderColor2,
@@ -53,6 +58,12 @@ export default function Hair({
       Hair19,
       Hair20,
       Hair21,
+      Hair22,
+      Hair23,
+      Hair24,
+      Hair25,
+      Hair26,
+      Hair27,
     ],
     []
   );

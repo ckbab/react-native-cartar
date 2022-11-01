@@ -22,6 +22,12 @@ import Border18 from "./Border18";
 import Border19 from "./Border19";
 import Border20 from "./Border20";
 import Border21 from "./Border21";
+import Border22 from "./Border22";
+import Border23 from "./Border23";
+import Border24 from "./Border24";
+import Border25 from "./Border25";
+import Border26 from "./Border26";
+import Border27 from "./Border27";
 
 export default function Border({ borderColor1, type }) {
   const components = useMemo(
@@ -48,6 +54,12 @@ export default function Border({ borderColor1, type }) {
       Border19,
       Border20,
       Border21,
+      Border22,
+      Border23,
+      Border24,
+      Border25,
+      Border26,
+      Border27,
     ],
     []
   );
