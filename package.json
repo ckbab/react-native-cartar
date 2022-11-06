@@ -1,14 +1,13 @@
 {
   "name": "@ckbab/react-native-cartar",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "React Native wrapper for cartar.io images.",
   "main": "index.js",
   "scripts": {
     "format": "npx prettier . --write && npx eslint . --fix"
   },
   "dependencies": {
-    "@ckbab/js-utils": "^1.0.5",
-    "react-native-svg": "^13.4.0"
+    "@ckbab/js-utils": "^1.0.5"
   },
   "peerDependencies": {
     "react": ">=17.0.1",

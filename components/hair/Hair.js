@@ -27,6 +27,7 @@ import Hair24 from "./Hair24";
 import Hair25 from "./Hair25";
 import Hair26 from "./Hair26";
 import Hair27 from "./Hair27";
+import Hair28 from "./Hair28";
 
 export default function Hair({
   borderColor2,
@@ -64,6 +65,7 @@ export default function Hair({
       Hair25,
       Hair26,
       Hair27,
+      Hair28,
     ],
     []
   );

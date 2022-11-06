@@ -176,7 +176,7 @@ Cartar.propTypes = {
   beard: checkLimit(10),
   beardColor: checkLimit(10, true),
   eye: checkLimit(10),
-  hair: checkLimit(27),
+  hair: checkLimit(28),
   hairColor: checkLimit(10, true),
   mouth: checkLimit(10),
   shirt: checkLimit(12),

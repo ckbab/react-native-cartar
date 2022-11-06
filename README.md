@@ -8,6 +8,8 @@ React Native wrapper for [cartar.io](https://cartar.io).
 yarn add @ckbab/react-native-cartar
 ```
 
+This package depends on `react-native-svg` so you need to install it as well.
+
 ## Examples
 
 ![](https://cartar.io/?hair=6&eye=5&mouth=4&beard=5&shirt=2&skin-color=5&hair-color=7&beard-color=4&shirt-color=44bd32&shirt-color-alt=2f3640&size=200)
@@ -27,7 +29,7 @@ import Cartar from "@ckbab/react-native-cartar";
 | Name            | Type                 | Values   | Default value                                          |
 | --------------- | -------------------- | -------- | ------------------------------------------------------ |
 | `size`          | `number`             | -        | `100`                                                  |
-| `hair`          | `number`             | `0 - 21` | `0`                                                    |
+| `hair`          | `number`             | `0 - 28` | `0`                                                    |
 | `eye`           | `number`             | `0 - 10` | `0`                                                    |
 | `mouth`         | `number`             | `0 - 10` | `0`                                                    |
 | `beard`         | `number`             | `0 - 10` | `0`                                                    |
