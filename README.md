@@ -31,6 +31,8 @@ import Cartar from "@ckbab/react-native-cartar";
 | `size`          | `number`             | -        | `100`                                                  |
 | `hair`          | `number`             | `0 - 28` | `0`                                                    |
 | `eye`           | `number`             | `0 - 10` | `0`                                                    |
+| `glasses`       | `number`             | `0 - 5`  | `0`                                                    |
+| `glassesColor`  | `string`             | -        | ![](https://via.placeholder.com/16/999/999.png) `#000` |
 | `mouth`         | `number`             | `0 - 10` | `0`                                                    |
 | `beard`         | `number`             | `0 - 10` | `0`                                                    |
 | `shirt`         | `number`             | `0 - 12` | `0`                                                    |
