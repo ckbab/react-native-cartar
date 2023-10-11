@@ -10,6 +10,7 @@ import Mouth7 from "./Mouth7";
 import Mouth8 from "./Mouth8";
 import Mouth9 from "./Mouth9";
 import Mouth10 from "./Mouth10";
+import Mouth11 from "./Mouth11";
 
 export default function Mouth({
   mouthColor,
@@ -31,8 +32,9 @@ export default function Mouth({
       Mouth8,
       Mouth9,
       Mouth10,
+      Mouth11,
     ],
-    []
+    [],
   );
 
   const Component = components[type - 1];

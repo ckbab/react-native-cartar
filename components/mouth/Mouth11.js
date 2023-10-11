@@ -2,8 +2,8 @@ import { changeColor } from "@ckbab/js-utils";
 import React from "react";
 import { G, Path } from "react-native-svg";
 
-export default function Mouth11({ borderColor2, color }) {
-  const shadowColor = changeColor(color, "#000", 0.9);
+export default function Mouth11({ borderColor2, mouthColor }) {
+  const shadowColor = changeColor(mouthColor, "#000", 0.9);
 
   return (
     <G scale="0.00001">
@@ -13,7 +13,7 @@ export default function Mouth11({ borderColor2, color }) {
       />
       <Path
         d="M21869 36019c1817,-82 4987,-514 7420,-2381 3168,-2430 4454,-3454 7969,-242 2411,2202 5740,2372 7595,2262 -763,5269 -5630,9333 -11522,9333 -5756,0 -10535,-3880 -11463,-8972z"
-        fill={color}
+        fill={mouthColor}
       />
       <Path
         d="M39824 43154c-1854,1159 -4087,1836 -6492,1836 -2387,0 -4607,-668 -6453,-1813 1476,-1765 3830,-2907 6482,-2907 2640,0 4985,1132 6462,2883z"
@@ -37,7 +37,7 @@ export default function Mouth11({ borderColor2, color }) {
       />
       <Path
         d="M44749 36253c-56,269 -122,534 -198,795 34,0 68,1 101,1 199,2 389,0 571,-5 90,-315 168,-601 233,-844 -155,15 -328,30 -515,41 -62,4 -126,7 -192,11zm-22557 1049c-74,-230 -141,-464 -198,-700 -103,5 -202,9 -296,13 -233,8 -441,11 -619,10 33,259 71,509 113,752 239,-12 498,-30 772,-54 75,-7 151,-14 228,-22z"
-        fill={color}
+        fill={mouthColor}
       />
     </G>
   );
