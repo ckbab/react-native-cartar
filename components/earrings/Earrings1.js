@@ -1,7 +1,7 @@
 import React from "react";
 import { G, Path } from "react-native-svg";
 
-export default function Accessories1({ borderColor2, color }) {
+export default function Earrings1({ borderColor2, color }) {
   return (
     <G scale="0.00001">
       <Path

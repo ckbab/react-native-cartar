@@ -12,27 +12,31 @@ import {
   teethColor,
   tongueColor,
 } from "../constants/colors";
-import Accessories from "./accessories/Accessories";
 import Beard from "./beard/Beard";
 import Border from "./border/Border";
+import Earrings from "./earrings/Earrings";
 import Eye from "./eye/Eye";
 import Glasses from "./glasses/Glasses";
 import Hair from "./hair/Hair";
 import Mouth from "./mouth/Mouth";
+import Necklace from "./necklace/Necklace";
 import Face from "./other/Face";
 import Throat from "./other/Throat";
 import Shirt from "./shirt/Shirt";
 
 export default function Cartar({
-  accessories,
   beard,
   beardColor,
+  earrings,
+  earringsColor = "#4ee2ec",
   eye,
   glasses,
   glassesColor,
   hair,
   hairColor,
   mouth,
+  necklace,
+  necklaceColor = "#ffd700",
   shirt,
   shirtColor = "#ddd",
   shirtColorAlt = "#aaa",
@@ -77,6 +81,7 @@ export default function Cartar({
       beard2: beardColorToUse,
       border1: outsideBorderColor,
       border2: insideBorderColor,
+      earrings: earringsColor,
       eye1: changeColor(skinColorToUse, "#000", 0.3),
       eye2: changeColor(skinColorToUse, "#000", 0.2),
       glasses1: glassesColorToUse,
@@ -85,6 +90,7 @@ export default function Cartar({
       hair2: changeColor(hairColorToUse, "#fff", 0.9),
       hair3: changeColor(hairColorToUse, "#000", 0.9),
       mouth: changeColor(skinColorToUse, "#000", 0.6),
+      necklace: necklaceColor,
       shirt1: shirtColorToUse,
       shirt2: changeColor(shirtColorToUse, "#000", 0.9),
       shirt3: shirtColorAltToUse,
@@ -98,10 +104,12 @@ export default function Cartar({
     };
   }, [
     beardColor,
+    earringsColor,
     getBeardColor,
     getDefaultColor,
     glassesColor,
     hairColor,
+    necklaceColor,
     shirtColor,
     shirtColorAlt,
     skinColor,
@@ -160,14 +168,16 @@ export default function Cartar({
         glassesColor2={colors.glasses2}
         type={glasses}
       />
-      {accessories?.map((item) => (
-        <Accessories
-          borderColor2={colors.border2}
-          colors={item?.colors}
-          key={item?.type}
-          type={item?.type}
-        />
-      ))}
+      <Earrings
+        borderColor2={colors.borderColor2}
+        color={colors.necklace}
+        type={earrings}
+      />
+      <Necklace
+        borderColor2={colors.borderColor2}
+        color={colors.necklace}
+        type={necklace}
+      />
     </Svg>
   );
 }
@@ -195,20 +205,18 @@ const checkColor = (props, propName, componentName) => {
 };
 
 Cartar.propTypes = {
-  accessories: PropTypes.arrayOf(
-    PropTypes.shape({
-      colors: PropTypes.arrayOf(checkColor),
-      type: PropTypes.number,
-    }),
-  ),
   beard: checkLimit(10),
   beardColor: checkLimit(10, true),
+  earrings: checkLimit(4),
+  earringsColor: checkColor,
   eye: checkLimit(10),
   glasses: checkLimit(1),
   glassesColor: checkColor,
   hair: checkLimit(28),
   hairColor: checkLimit(10, true),
-  mouth: checkLimit(10),
+  mouth: checkLimit(11),
+  necklace: checkLimit(3),
+  necklaceColor: checkColor,
   shirt: checkLimit(19),
   shirtColor: checkColor,
   shirtColorAlt: checkColor,

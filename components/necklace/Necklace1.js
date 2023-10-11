@@ -2,7 +2,7 @@ import { changeColor } from "@ckbab/js-utils";
 import React from "react";
 import { Ellipse, G, Path } from "react-native-svg";
 
-export default function Accessories5({ borderColor2, color }) {
+export default function Necklace1({ borderColor2, color }) {
   const darkColor = changeColor(color, "#000", 0.8);
   const lightColor = changeColor(color, "#fff", 0.8);
 

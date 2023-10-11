@@ -2,7 +2,7 @@ import { changeColor } from "@ckbab/js-utils";
 import React from "react";
 import { G, Path } from "react-native-svg";
 
-export default function Accessories2({ borderColor2, color }) {
+export default function Earrings2({ borderColor2, color }) {
   const shadowColor = changeColor(color, "#fff", 0.9);
 
   return (
