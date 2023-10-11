@@ -12,6 +12,7 @@ import {
   teethColor,
   tongueColor,
 } from "../constants/colors";
+import Accessories from "./accessories/Accessories";
 import Beard from "./beard/Beard";
 import Border from "./border/Border";
 import Eye from "./eye/Eye";
@@ -23,6 +24,7 @@ import Throat from "./other/Throat";
 import Shirt from "./shirt/Shirt";
 
 export default function Cartar({
+  accessories,
   beard,
   beardColor,
   eye,
@@ -158,6 +160,14 @@ export default function Cartar({
         glassesColor2={colors.glasses2}
         type={glasses}
       />
+      {accessories?.map((item) => (
+        <Accessories
+          borderColor2={colors.border2}
+          colors={item?.colors}
+          key={item?.type}
+          type={item?.type}
+        />
+      ))}
     </Svg>
   );
 }
@@ -185,6 +195,12 @@ const checkColor = (props, propName, componentName) => {
 };
 
 Cartar.propTypes = {
+  accessories: PropTypes.arrayOf(
+    PropTypes.shape({
+      colors: PropTypes.arrayOf(checkColor),
+      type: PropTypes.number,
+    }),
+  ),
   beard: checkLimit(10),
   beardColor: checkLimit(10, true),
   eye: checkLimit(10),
