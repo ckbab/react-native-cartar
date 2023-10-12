@@ -125,7 +125,12 @@ export default function Cartar({
       viewBox="0 0 0.666661 0.666661"
       width={size}
     >
-      <Border borderColor1={colors.border1} type={hair} />
+      <Border
+        borderColor1={colors.border1}
+        earrings={earrings}
+        hair={hair}
+        necklace={necklace}
+      />
       <Shirt
         borderColor2={colors.border2}
         shirtColor1={colors.shirt1}
@@ -171,12 +176,12 @@ export default function Cartar({
         type={glasses}
       />
       <Earrings
-        borderColor2={colors.borderColor2}
+        borderColor2={colors.border2}
         color={colors.necklace}
         type={earrings}
       />
       <Necklace
-        borderColor2={colors.borderColor2}
+        borderColor2={colors.border2}
         color={colors.necklace}
         type={necklace}
       />
