@@ -1,6 +1,9 @@
 import React, { useMemo } from "react";
 
+import EarringsBorder1 from "./earrings/Border1";
 import EarringsBorder2 from "./earrings/Border2";
+import EarringsBorder3 from "./earrings/Border3";
+import EarringsBorder4 from "./earrings/Border4";
 import HairBorder0 from "./hair/Border0";
 import HairBorder1 from "./hair/Border1";
 import HairBorder2 from "./hair/Border2";
@@ -30,9 +33,16 @@ import HairBorder25 from "./hair/Border25";
 import HairBorder26 from "./hair/Border26";
 import HairBorder27 from "./hair/Border27";
 import HairBorder28 from "./hair/Border28";
+import MouthBorder11 from "./mouth/Border11";
 import NecklaceBorder3 from "./necklace/Border3";
 
-export default function Border({ borderColor1, earrings, hair, necklace }) {
+export default function Border({
+  borderColor1,
+  earrings,
+  hair,
+  mouth,
+  necklace,
+}) {
   const hairBorders = useMemo(
     () => [
       HairBorder0,
@@ -71,7 +81,13 @@ export default function Border({ borderColor1, earrings, hair, necklace }) {
   const extraBorders = useMemo(
     () => ({
       earrings: {
+        1: EarringsBorder1,
         2: EarringsBorder2,
+        3: EarringsBorder3,
+        4: EarringsBorder4,
+      },
+      mouth: {
+        11: MouthBorder11,
       },
       necklace: {
         3: NecklaceBorder3,
@@ -85,12 +101,14 @@ export default function Border({ borderColor1, earrings, hair, necklace }) {
 
   const NecklaceBorder = extraBorders?.necklace[necklace];
   const EarringsBorder = extraBorders?.earrings[earrings];
+  const MouthBorder = extraBorders?.mouth[mouth];
 
   return (
     <>
       {HairBorder && <HairBorder borderColor1={borderColor1} />}
       {NecklaceBorder && <NecklaceBorder borderColor1={borderColor1} />}
       {EarringsBorder && <EarringsBorder borderColor1={borderColor1} />}
+      {MouthBorder && <MouthBorder borderColor1={borderColor1} />}
     </>
   );
 }

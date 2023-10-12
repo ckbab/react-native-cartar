@@ -129,6 +129,7 @@ export default function Cartar({
         borderColor1={colors.border1}
         earrings={earrings}
         hair={hair}
+        mouth={mouth}
         necklace={necklace}
       />
       <Shirt
@@ -217,7 +218,7 @@ Cartar.propTypes = {
   earrings: checkLimit(4),
   earringsColor: checkColor,
   eye: checkLimit(10),
-  glasses: checkLimit(1),
+  glasses: checkLimit(5),
   glassesColor: checkColor,
   hair: checkLimit(28),
   hairColor: checkLimit(10, true),
