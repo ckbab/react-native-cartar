@@ -18,6 +18,7 @@ import Earrings from "./earrings/Earrings";
 import Eye from "./eye/Eye";
 import Glasses from "./glasses/Glasses";
 import Hair from "./hair/Hair";
+import Hat from "./hat/Hat";
 import Mouth from "./mouth/Mouth";
 import Necklace from "./necklace/Necklace";
 import Face from "./other/Face";
@@ -34,6 +35,8 @@ export default function Cartar({
   glassesColor,
   hair,
   hairColor,
+  hat,
+  hatColor = "#0b6623",
   mouth,
   mouthColor = "#ff0000",
   necklace,
@@ -90,6 +93,7 @@ export default function Cartar({
       hair1: hairColorToUse,
       hair2: changeColor(hairColorToUse, "#fff", 0.9),
       hair3: changeColor(hairColorToUse, "#000", 0.9),
+      hat: hatColor,
       mouth: mouthColor || changeColor(skinColorToUse, "#000", 0.6),
       necklace: necklaceColor,
       shirt1: shirtColorToUse,
@@ -110,6 +114,7 @@ export default function Cartar({
     getDefaultColor,
     glassesColor,
     hairColor,
+    hatColor,
     mouthColor,
     necklaceColor,
     shirtColor,
@@ -158,6 +163,7 @@ export default function Cartar({
         hairColor3={colors.hair3}
         type={hair}
       />
+      <Hat borderColor2={colors.border2} color={colors.hat} type={hat} />
       <Beard
         beardColor1={colors.beard1}
         beardColor2={colors.beard2}
@@ -222,6 +228,8 @@ Cartar.propTypes = {
   glassesColor: checkColor,
   hair: checkLimit(28),
   hairColor: checkLimit(10, true),
+  hat: checkLimit(1),
+  hatColor: checkColor,
   mouth: checkLimit(11),
   mouthColor: checkColor,
   necklace: checkLimit(3),
