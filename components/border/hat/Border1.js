@@ -1,7 +1,7 @@
 import React from "react";
 import { G, Path } from "react-native-svg";
 
-export default function Border11({ borderColor1 }) {
+export default function Border1({ borderColor1 }) {
   return (
     <G scale="0.00001">
       <Path
