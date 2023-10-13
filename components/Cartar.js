@@ -134,6 +134,7 @@ export default function Cartar({
         borderColor1={colors.border1}
         earrings={earrings}
         hair={hair}
+        hat={hat}
         mouth={mouth}
         necklace={necklace}
       />

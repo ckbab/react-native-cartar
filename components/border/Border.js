@@ -33,6 +33,7 @@ import HairBorder25 from "./hair/Border25";
 import HairBorder26 from "./hair/Border26";
 import HairBorder27 from "./hair/Border27";
 import HairBorder28 from "./hair/Border28";
+import HatBorder1 from "./hat/Border1";
 import MouthBorder11 from "./mouth/Border11";
 import NecklaceBorder3 from "./necklace/Border3";
 
@@ -40,6 +41,7 @@ export default function Border({
   borderColor1,
   earrings,
   hair,
+  hat,
   mouth,
   necklace,
 }) {
@@ -86,6 +88,9 @@ export default function Border({
         3: EarringsBorder3,
         4: EarringsBorder4,
       },
+      hat: {
+        1: HatBorder1,
+      },
       mouth: {
         11: MouthBorder11,
       },
@@ -99,16 +104,18 @@ export default function Border({
   // Note we do not use - 1 here since.
   const HairBorder = hairBorders[hair || 0];
 
-  const NecklaceBorder = extraBorders?.necklace[necklace];
   const EarringsBorder = extraBorders?.earrings[earrings];
+  const HatBorder = extraBorders?.hat[hat];
   const MouthBorder = extraBorders?.mouth[mouth];
+  const NecklaceBorder = extraBorders?.necklace[necklace];
 
   return (
     <>
       {HairBorder && <HairBorder borderColor1={borderColor1} />}
-      {NecklaceBorder && <NecklaceBorder borderColor1={borderColor1} />}
       {EarringsBorder && <EarringsBorder borderColor1={borderColor1} />}
+      {HatBorder && <HatBorder borderColor1={borderColor1} />}
       {MouthBorder && <MouthBorder borderColor1={borderColor1} />}
+      {NecklaceBorder && <NecklaceBorder borderColor1={borderColor1} />}
     </>
   );
 }
