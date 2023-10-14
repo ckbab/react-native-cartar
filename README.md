@@ -26,28 +26,29 @@ import Cartar from "@ckbab/react-native-cartar";
 
 ## Properties
 
-| Name            | Type                 | Values   | Default value                                                   |
-| --------------- | -------------------- | -------- | --------------------------------------------------------------- |
-| `beard`         | `number`             | `0 - 10` | `0`                                                             |
-| `beardColor`    | `number` or `string` | `0-10`   | `0`                                                             |
-| `earrings`      | `number`             | `0 - 4`  | `0`                                                             |
-| `earringsColor` | `string`             | `0 - 3`  | ![](https://via.placeholder.com/16/4ee2ec/4ee2ec.png) `#4ee2ec` |
-| `eye`           | `number`             | `0 - 10` | `0`                                                             |
-| `glasses`       | `number`             | `0 - 5`  | `0`                                                             |
-| `glassesColor`  | `string`             | -        | ![](https://via.placeholder.com/16/000/000.png) `#000`          |
-| `hair`          | `number`             | `0 - 28` | `0`                                                             |
-| `hairColor`     | `number` or `string` | `0-10`   | `0`                                                             |
-| `hat`           | `number`             | `0 - 7`  | `0`                                                             |
-| `hatColor`      | `string`             | -        | ![](https://via.placeholder.com/16/0b6623/0b6623.png) `#0b6623` |
-| `mouth`         | `number`             | `0 - 11` | `0`                                                             |
-| `mouthColor`    | `string`             | `0 - 3`  | ![](https://via.placeholder.com/16/ff0000/ff0000.png) `#ff0000` |
-| `necklace`      | `number`             | `0 - 3`  | `0`                                                             |
-| `necklaceColor` | `string`             | `0 - 3`  | ![](https://via.placeholder.com/16/ffd700/ffd700.png) `#ffd700` |
-| `shirt`         | `number`             | `0 - 19` | `0`                                                             |
-| `shirtColor`    | `string`             | -        | ![](https://via.placeholder.com/16/999/999.png) `#999`          |
-| `shirtColorAlt` | `string`             | -        | ![](https://via.placeholder.com/16/666/666.png) `#666`          |
-| `skinColor`     | `number` or `string` | `0-8`    | `0`                                                             |
-| `size`          | `number`             | -        | `100`                                                           |
+| Name            | Type                 | Values   | Default value                                                    |
+| --------------- | -------------------- | -------- | ---------------------------------------------------------------- |
+| `beard`         | `number`             | `0 - 10` | `0`                                                              |
+| `beardColor`    | `number` or `string` | `0-10`   | `0`                                                              |
+| `earrings`      | `number`             | `0 - 4`  | `0`                                                              |
+| `earringsColor` | `string`             | `0 - 3`  | ![](https://via.placeholder.com/16/4ee2ec/4ee2ec.png) `#4ee2ec`  |
+| `eye`           | `number`             | `0 - 10` | `0`                                                              |
+| `eyeColor`      | `string`             | -        | ![](https://via.placeholder.com/16/0096ff/0096ff.png) `#0096ffX` |
+| `glasses`       | `number`             | `0 - 5`  | `0`                                                              |
+| `glassesColor`  | `string`             | -        | ![](https://via.placeholder.com/16/000/000.png) `#000`           |
+| `hair`          | `number`             | `0 - 28` | `0`                                                              |
+| `hairColor`     | `number` or `string` | `0-10`   | `0`                                                              |
+| `hat`           | `number`             | `0 - 7`  | `0`                                                              |
+| `hatColor`      | `string`             | -        | ![](https://via.placeholder.com/16/0b6623/0b6623.png) `#0b6623`  |
+| `mouth`         | `number`             | `0 - 11` | `0`                                                              |
+| `mouthColor`    | `string`             | `0 - 3`  | ![](https://via.placeholder.com/16/ff0000/ff0000.png) `#ff0000`  |
+| `necklace`      | `number`             | `0 - 3`  | `0`                                                              |
+| `necklaceColor` | `string`             | `0 - 3`  | ![](https://via.placeholder.com/16/ffd700/ffd700.png) `#ffd700`  |
+| `shirt`         | `number`             | `0 - 19` | `0`                                                              |
+| `shirtColor`    | `string`             | -        | ![](https://via.placeholder.com/16/999/999.png) `#999`           |
+| `shirtColorAlt` | `string`             | -        | ![](https://via.placeholder.com/16/666/666.png) `#666`           |
+| `skinColor`     | `number` or `string` | `0-8`    | `0`                                                              |
+| `size`          | `number`             | -        | `100`                                                            |
 
 Note that `skinColor`, `hairColor` and `beardColor` support both predefined colors (e.g. 3) or custom colors (e.g. `#cc00ff`).
 
