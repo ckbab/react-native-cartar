@@ -34,9 +34,12 @@ import HairBorder26 from "./hair/Border26";
 import HairBorder27 from "./hair/Border27";
 import HairBorder28 from "./hair/Border28";
 import HatBorder1 from "./hat/Border1";
+import HatBorder2 from "./hat/Border2";
 import HatBorder3 from "./hat/Border3";
 import HatBorder4 from "./hat/Border4";
+import HatBorder5 from "./hat/Border5";
 import HatBorder6 from "./hat/Border6";
+import HatBorder7 from "./hat/Border7";
 import MouthBorder11 from "./mouth/Border11";
 import NecklaceBorder3 from "./necklace/Border3";
 
@@ -93,9 +96,12 @@ export default function Border({
       },
       hat: {
         1: HatBorder1,
+        2: HatBorder2,
         3: HatBorder3,
         4: HatBorder4,
+        5: HatBorder5,
         6: HatBorder6,
+        7: HatBorder7,
       },
       mouth: {
         11: MouthBorder11,
