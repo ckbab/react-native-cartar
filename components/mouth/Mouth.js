@@ -11,6 +11,10 @@ import Mouth8 from "./Mouth8";
 import Mouth9 from "./Mouth9";
 import Mouth10 from "./Mouth10";
 import Mouth11 from "./Mouth11";
+import Mouth12 from "./Mouth12";
+import Mouth13 from "./Mouth13";
+import Mouth14 from "./Mouth14";
+import Mouth15 from "./Mouth15";
 
 export default function Mouth({
   mouthColor,
@@ -33,6 +37,10 @@ export default function Mouth({
       Mouth9,
       Mouth10,
       Mouth11,
+      Mouth12,
+      Mouth13,
+      Mouth14,
+      Mouth15,
     ],
     [],
   );

@@ -40,7 +40,7 @@ import Cartar from "@ckbab/react-native-cartar";
 | `hairColor`     | `number` or `string` | `0-10`   | `0`                                                              |
 | `hat`           | `number`             | `0 - 7`  | `0`                                                              |
 | `hatColor`      | `string`             | -        | ![](https://via.placeholder.com/16/0b6623/0b6623.png) `#0b6623`  |
-| `mouth`         | `number`             | `0 - 11` | `0`                                                              |
+| `mouth`         | `number`             | `0 - 15` | `0`                                                              |
 | `mouthColor`    | `string`             | `0 - 3`  | ![](https://via.placeholder.com/16/ff0000/ff0000.png) `#ff0000`  |
 | `necklace`      | `number`             | `0 - 3`  | `0`                                                              |
 | `necklaceColor` | `string`             | `0 - 3`  | ![](https://via.placeholder.com/16/ffd700/ffd700.png) `#ffd700`  |
