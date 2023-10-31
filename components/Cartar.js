@@ -158,7 +158,13 @@ export default function Cartar({
         skinColor1={colors.skin1}
         skinColor2={colors.skin2}
       />
-      <Eye eyeColor1={colors.eye1} eyeColor2={colors.eye2} type={eye} />
+      <Eye
+        borderColor2={colors.border2}
+        eyeColor1={colors.eye1}
+        eyeColor2={colors.eye2}
+        skinColor2={colors.skin2}
+        type={eye}
+      />
       <Hair
         borderColor2={colors.border2}
         hairColor1={colors.hair1}
@@ -226,11 +232,11 @@ Cartar.propTypes = {
   beardColor: checkLimit(10, true),
   earrings: checkLimit(4),
   earringsColor: checkColor,
-  eye: checkLimit(10),
+  eye: checkLimit(13),
   eyeColor: checkColor,
   glasses: checkLimit(5),
   glassesColor: checkColor,
-  hair: checkLimit(29),
+  hair: checkLimit(30),
   hairColor: checkLimit(10, true),
   hat: checkLimit(1),
   hatColor: checkColor,
