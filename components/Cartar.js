@@ -172,7 +172,6 @@ export default function Cartar({
         hairColor3={colors.hair3}
         type={hair}
       />
-      <Hat borderColor2={colors.border2} color={colors.hat} type={hat} />
       <Beard
         beardColor1={colors.beard1}
         beardColor2={colors.beard2}
@@ -186,6 +185,7 @@ export default function Cartar({
         tongueColor3={colors.tongue3}
         type={mouth}
       />
+      <Hat borderColor2={colors.border2} color={colors.hat} type={hat} />
       <Glasses
         glassesColor1={colors.glasses1}
         glassesColor2={colors.glasses2}
