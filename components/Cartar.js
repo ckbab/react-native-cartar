@@ -236,7 +236,7 @@ Cartar.propTypes = {
   eyeColor: checkColor,
   glasses: checkLimit(5),
   glassesColor: checkColor,
-  hair: checkLimit(30),
+  hair: checkLimit(32),
   hairColor: checkLimit(10, true),
   hat: checkLimit(1),
   hatColor: checkColor,

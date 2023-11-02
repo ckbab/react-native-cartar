@@ -35,6 +35,8 @@ import HairBorder27 from "./hair/Border27";
 import HairBorder28 from "./hair/Border28";
 import HairBorder29 from "./hair/Border29";
 import HairBorder30 from "./hair/Border30";
+import HairBorder31 from "./hair/Border31";
+import HairBorder32 from "./hair/Border32";
 import HatBorder1 from "./hat/Border1";
 import HatBorder2 from "./hat/Border2";
 import HatBorder3 from "./hat/Border3";
@@ -86,6 +88,8 @@ export default function Border({
       HairBorder28,
       HairBorder29,
       HairBorder30,
+      HairBorder31,
+      HairBorder32,
     ],
     [],
   );
