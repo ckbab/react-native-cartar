@@ -88,7 +88,8 @@ export default function Cartar({
       border2: insideBorderColor,
       earrings: earringsColor,
       eye1: eyeColor || changeColor(skinColorToUse, "#000", 0.3),
-      eye2: changeColor(skinColorToUse, "#000", 0.2),
+      eye2: "#fff",
+      eye3: "#ccc",
       glasses1: glassesColorToUse,
       glasses2: changeColor(glassesColorToUse, "#fff", 0.9),
       hair1: hairColorToUse,
@@ -162,6 +163,7 @@ export default function Cartar({
         borderColor2={colors.border2}
         eyeColor1={colors.eye1}
         eyeColor2={colors.eye2}
+        eyeColor3={colors.eye3}
         skinColor2={colors.skin2}
         type={eye}
       />

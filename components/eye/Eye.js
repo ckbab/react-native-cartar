@@ -18,6 +18,7 @@ export default function Eye({
   borderColor2,
   eyeColor1,
   eyeColor2,
+  eyeColor3,
   skinColor2,
   type,
 }) {
@@ -51,6 +52,7 @@ export default function Eye({
       borderColor2={borderColor2}
       eyeColor1={eyeColor1}
       eyeColor2={eyeColor2}
+      eyeColor3={eyeColor3}
       skinColor2={skinColor2}
     />
   );
