@@ -164,6 +164,7 @@ export default function Cartar({
         eyeColor1={colors.eye1}
         eyeColor2={colors.eye2}
         eyeColor3={colors.eye3}
+        skinColor1={colors.skin1}
         skinColor2={colors.skin2}
         type={eye}
       />
