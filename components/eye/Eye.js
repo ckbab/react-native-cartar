@@ -13,6 +13,11 @@ import Eye10 from "./Eye10";
 import Eye11 from "./Eye11";
 import Eye12 from "./Eye12";
 import Eye13 from "./Eye13";
+import Eye14 from "./Eye14";
+import Eye15 from "./Eye15";
+import Eye16 from "./Eye16";
+import Eye17 from "./Eye17";
+import Eye18 from "./Eye18";
 
 export default function Eye({
   borderColor2,
@@ -38,6 +43,11 @@ export default function Eye({
       Eye11,
       Eye12,
       Eye13,
+      Eye14,
+      Eye15,
+      Eye16,
+      Eye17,
+      Eye18,
     ],
     [],
   );

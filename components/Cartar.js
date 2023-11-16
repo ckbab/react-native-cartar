@@ -16,7 +16,6 @@ import Beard from "./beard/Beard";
 import Border from "./border/Border";
 import Earrings from "./earrings/Earrings";
 import Eye from "./eye/Eye";
-import Glasses from "./glasses/Glasses";
 import Hair from "./hair/Hair";
 import Hat from "./hat/Hat";
 import Mouth from "./mouth/Mouth";
@@ -32,8 +31,6 @@ export default function Cartar({
   earringsColor = "#4ee2ec",
   eye,
   eyeColor = "#0096ff",
-  glasses,
-  glassesColor,
   hair,
   hairColor,
   hat,
@@ -79,7 +76,6 @@ export default function Cartar({
     // Avoid colors being null or undefined.
     const shirtColorToUse = shirtColor || "#ddd";
     const shirtColorAltToUse = shirtColorAlt || "#aaa";
-    const glassesColorToUse = glassesColor || "#000";
 
     return {
       beard1: changeColor(skinColorToUse, "#000", 0.9),
@@ -90,8 +86,6 @@ export default function Cartar({
       eye1: eyeColor || changeColor(skinColorToUse, "#000", 0.3),
       eye2: "#fff",
       eye3: "#ccc",
-      glasses1: glassesColorToUse,
-      glasses2: changeColor(glassesColorToUse, "#fff", 0.9),
       hair1: hairColorToUse,
       hair2: changeColor(hairColorToUse, "#fff", 0.9),
       hair3: changeColor(hairColorToUse, "#000", 0.9),
@@ -115,7 +109,6 @@ export default function Cartar({
     eyeColor,
     getBeardColor,
     getDefaultColor,
-    glassesColor,
     hairColor,
     hatColor,
     mouthColor,
@@ -189,11 +182,6 @@ export default function Cartar({
         type={mouth}
       />
       <Hat borderColor2={colors.border2} color={colors.hat} type={hat} />
-      <Glasses
-        glassesColor1={colors.glasses1}
-        glassesColor2={colors.glasses2}
-        type={glasses}
-      />
       <Earrings
         borderColor2={colors.border2}
         color={colors.necklace}
@@ -235,10 +223,8 @@ Cartar.propTypes = {
   beardColor: checkLimit(10, true),
   earrings: checkLimit(4),
   earringsColor: checkColor,
-  eye: checkLimit(13),
+  eye: checkLimit(18),
   eyeColor: checkColor,
-  glasses: checkLimit(5),
-  glassesColor: checkColor,
   hair: checkLimit(32),
   hairColor: checkLimit(10, true),
   hat: checkLimit(1),
