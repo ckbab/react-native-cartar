@@ -14,6 +14,7 @@ import {
 } from "../constants/colors";
 import Beard from "./beard/Beard";
 import Border from "./border/Border";
+import Crop from "./crop/Crop";
 import Earrings from "./earrings/Earrings";
 import Eye from "./eye/Eye";
 import Hair from "./hair/Hair";
@@ -118,6 +119,9 @@ export default function Cartar({
     skinColor,
   ]);
 
+  // Need to use clip path, i.e. cut the hair, if a hat is used.
+  const clipPath = hat > 0 ? "url(#clip)" : null;
+
   return (
     <Svg
       fillRule="evenodd"
@@ -126,8 +130,10 @@ export default function Cartar({
       viewBox="0 0 0.666661 0.666661"
       width={size}
     >
+      <Crop hat={hat} />
       <Border
         borderColor1={colors.border1}
+        clipPath={clipPath}
         earrings={earrings}
         hair={hair}
         hat={hat}
@@ -152,6 +158,14 @@ export default function Cartar({
         skinColor1={colors.skin1}
         skinColor2={colors.skin2}
       />
+      <Hair
+        borderColor2={colors.border2}
+        clipPath={clipPath}
+        hairColor1={colors.hair1}
+        hairColor2={colors.hair2}
+        hairColor3={colors.hair3}
+        type={hair}
+      />
       <Eye
         borderColor2={colors.border2}
         eyeColor1={colors.eye1}
@@ -160,13 +174,6 @@ export default function Cartar({
         skinColor1={colors.skin1}
         skinColor2={colors.skin2}
         type={eye}
-      />
-      <Hair
-        borderColor2={colors.border2}
-        hairColor1={colors.hair1}
-        hairColor2={colors.hair2}
-        hairColor3={colors.hair3}
-        type={hair}
       />
       <Beard
         beardColor1={colors.beard1}

@@ -49,6 +49,7 @@ import NecklaceBorder3 from "./necklace/Border3";
 
 export default function Border({
   borderColor1,
+  clipPath,
   earrings,
   hair,
   hat,
@@ -131,7 +132,9 @@ export default function Border({
 
   return (
     <>
-      {HairBorder && <HairBorder borderColor1={borderColor1} />}
+      {HairBorder && (
+        <HairBorder borderColor1={borderColor1} clipPath={clipPath} />
+      )}
       {EarringsBorder && <EarringsBorder borderColor1={borderColor1} />}
       {HatBorder && <HatBorder borderColor1={borderColor1} />}
       {MouthBorder && <MouthBorder borderColor1={borderColor1} />}

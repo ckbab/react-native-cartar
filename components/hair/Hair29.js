@@ -3,12 +3,13 @@ import { Circle, G, Path } from "react-native-svg";
 
 export default function Hair29({
   borderColor2,
+  clipPath,
   hairColor1,
   hairColor2,
   hairColor3,
 }) {
   return (
-    <G scale="0.00001">
+    <G clipPath={clipPath} clipRule="evenodd" scale="0.00001">
       <Path
         d="M20255 23292c-126,1819 -136,3527 -50,5132 37,-602 383,-5119 2685,-7303 2469,-2343 5447,-2008 7414,-2608 1967,-599 2995,-2074 2995,-2074 0,0 1028,1475 2995,2074 1967,600 4944,265 7414,2608 2298,2180 2648,6683 2685,7300 85,-1604 76,-3311 -50,-5128 -949,-13700 -25139,-13700 -26088,0z"
         fill={hairColor3}

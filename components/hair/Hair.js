@@ -35,6 +35,7 @@ import Hair32 from "./Hair32";
 
 export default function Hair({
   borderColor2,
+  clipPath,
   hairColor1,
   hairColor2,
   hairColor3,
@@ -87,6 +88,7 @@ export default function Hair({
   return (
     <Component
       borderColor2={borderColor2}
+      clipPath={clipPath}
       hairColor1={hairColor1}
       hairColor2={hairColor2}
       hairColor3={hairColor3}
