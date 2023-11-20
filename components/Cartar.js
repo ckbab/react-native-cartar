@@ -130,7 +130,7 @@ export default function Cartar({
       viewBox="0 0 0.666661 0.666661"
       width={size}
     >
-      <Crop hat={hat} />
+      <Crop hair={hair} hat={hat} />
       <Border
         borderColor1={colors.border1}
         clipPath={clipPath}
