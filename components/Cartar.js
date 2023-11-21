@@ -84,14 +84,14 @@ export default function Cartar({
       border1: outsideBorderColor,
       border2: insideBorderColor,
       earrings: earringsColor,
-      eye1: eyeColor || changeColor(skinColorToUse, "#000", 0.3),
-      eye2: "#fff",
-      eye3: "#ccc",
+      eye1: eyeColor,
+      eye2: changeColor(skinColorToUse, "#fff", 0.2),
+      eye3: changeColor(skinColorToUse, "#fff", 0.4),
       hair1: hairColorToUse,
       hair2: changeColor(hairColorToUse, "#fff", 0.9),
       hair3: changeColor(hairColorToUse, "#000", 0.9),
       hat: hatColor,
-      mouth: mouthColor || changeColor(skinColorToUse, "#000", 0.6),
+      mouth: mouthColor,
       necklace: necklaceColor,
       shirt1: shirtColorToUse,
       shirt2: changeColor(shirtColorToUse, "#000", 0.9),
@@ -191,7 +191,7 @@ export default function Cartar({
       <Hat borderColor2={colors.border2} color={colors.hat} type={hat} />
       <Earrings
         borderColor2={colors.border2}
-        color={colors.necklace}
+        color={colors.earrings}
         type={earrings}
       />
       <Necklace
