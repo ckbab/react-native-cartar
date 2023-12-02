@@ -18,10 +18,9 @@ import Mouth15 from "./Mouth15";
 
 export default function Mouth({
   mouthColor,
-  teethColor,
-  tongueColor1,
-  tongueColor2,
-  tongueColor3,
+  teethColor1,
+  teethColor2,
+  tongueColor,
   type,
 }) {
   const components = useMemo(
@@ -54,10 +53,9 @@ export default function Mouth({
   return (
     <Component
       mouthColor={mouthColor}
-      teethColor={teethColor}
-      tongueColor1={tongueColor1}
-      tongueColor2={tongueColor2}
-      tongueColor3={tongueColor3}
+      teethColor1={teethColor1}
+      teethColor2={teethColor2}
+      tongueColor={tongueColor}
     />
   );
 }

@@ -99,10 +99,9 @@ export default function Cartar({
       shirt4: changeColor(shirtColorAltToUse, "#000", 0.9),
       skin1: skinColorToUse,
       skin2: changeColor(skinColorToUse, "#000", 0.9),
-      teeth: teethColor,
-      tongue1: tongueColor,
-      tongue2: changeColor(tongueColor, "#000", 0.8),
-      tongue3: changeColor(tongueColor, "#fff", 0.8),
+      teeth1: teethColor,
+      teeth2: changeColor(teethColor, "#000", 0.8),
+      tongue: tongueColor,
     };
   }, [
     beardColor,
@@ -182,10 +181,9 @@ export default function Cartar({
       />
       <Mouth
         mouthColor={colors.mouth}
-        teethColor={colors.teeth}
-        tongueColor1={colors.tongue1}
-        tongueColor2={colors.tongue2}
-        tongueColor3={colors.tongue3}
+        teethColor1={colors.teeth1}
+        teethColor2={colors.teeth2}
+        tongueColor={colors.tongue}
         type={mouth}
       />
       <Hat borderColor2={colors.border2} color={colors.hat} type={hat} />

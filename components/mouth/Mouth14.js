@@ -1,10 +1,12 @@
-import { changeColor } from "@ckbab/js-utils";
 import React from "react";
 import { G, Path } from "react-native-svg";
 
-export default function Mouth14({ borderColor2, teethColor, tongueColor1 }) {
-  const darkColor = changeColor(teethColor, "#000", 0.8);
-
+export default function Mouth14({
+  borderColor2,
+  teethColor1,
+  teethColor2,
+  tongueColor,
+}) {
   return (
     <G scale="0.00001">
       <Path
@@ -13,15 +15,15 @@ export default function Mouth14({ borderColor2, teethColor, tongueColor1 }) {
       />
       <Path
         d="M31071 35556c93,-210 219,-531 763,-423 545,108 1152,250 2094,38 943,-213 1219,-67 1329,276 109,343 658,2287 502,2801 -156,514 -1683,708 -2174,544 -491,-164 -475,-1647 -475,-1647 -13,-159 -196,-154 -185,66 22,435 25,1432 -205,1559 -311,171 -1823,132 -2088,-351 -265,-483 65,-1483 438,-2863z"
-        fill={teethColor}
+        fill={teethColor1}
       />
       <Path
         d="M31071 35556c93,-210 219,-531 763,-423 545,108 1152,250 2094,38 943,-213 1219,-67 1329,276 24,75 69,227 122,423 -107,-352 -393,-621 -701,-493 -319,132 -1726,630 -2563,233 -833,-395 -1183,458 -1187,466l143 -520zm-143 521l0 0"
-        fill={darkColor}
+        fill={teethColor2}
       />
       <Path
         d="M31189 39876c181,-278 776,-463 1458,-170 682,293 694,28 1398,-238 704,-266 1296,-151 1562,283 266,435 -1007,1394 -2200,1494 -1193,99 -2641,-671 -2218,-1369z"
-        fill={tongueColor1}
+        fill={tongueColor}
       />
       <Path
         d="M27989 33085c61,-266 326,-432 591,-371 265,61 432,326 371,591 -1,4 -290,1510 -2245,2077 -261,76 -535,-75 -611,-336 -75,-261 75,-535 337,-611 1379,-400 1556,-1348 1557,-1350z"
