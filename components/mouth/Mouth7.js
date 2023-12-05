@@ -3,7 +3,7 @@ import { G, Path } from "react-native-svg";
 
 export default function Mouth7({ borderColor2 }) {
   return (
-    <G scale="0.00001">
+    <G scale="0.00001" translateY={0.02}>
       <Path
         d="M26987 38590c3822,-2882 8652,-3946 12270,-2303 233,106 505,-257 204,-490 -3954,-2954 -9811,-1214 -12475,2793z"
         fill={borderColor2}

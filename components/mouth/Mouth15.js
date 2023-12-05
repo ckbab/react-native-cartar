@@ -3,7 +3,7 @@ import { G, Path } from "react-native-svg";
 
 export default function Mouth15({ borderColor2, teethColor1, teethColor2 }) {
   return (
-    <G scale="0.00001">
+    <G scale={0.00001 * 1.1} translateX={-0.04} translateY={-0.02}>
       <Path
         d="M28168 35080c333,-757 1858,-1693 3444,-837 1039,560 3029,340 4644,-26 852,-193 1347,-757 1841,-783 2180,-115 2276,5376 -765,6237 -3042,861 -5433,861 -7078,248 -1645,-612 -3042,-2678 -2085,-4839z"
         fill={borderColor2}

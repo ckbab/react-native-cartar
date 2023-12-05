@@ -11,7 +11,7 @@ export default function Mouth8({
   const darkTongueColor = changeColor(tongueColor, "#000", 0.8);
 
   return (
-    <G scale="0.00001">
+    <G scale="0.00001" translateY={0.01}>
       <Path
         d="M27033 35533c0,0 1356,778 4297,685 2941,-92 8250,-3189 8250,-3189 0,0 -2379,7757 -6354,8567 -3975,809 -6193,-6063 -6193,-6063z"
         fill={borderColor2}
