@@ -4,6 +4,7 @@ import EarringsBorder1 from "./earrings/Border1";
 import EarringsBorder2 from "./earrings/Border2";
 import EarringsBorder3 from "./earrings/Border3";
 import EarringsBorder4 from "./earrings/Border4";
+import EarringsBorder6 from "./earrings/Border6";
 import HairBorder0 from "./hair/Border0";
 import HairBorder1 from "./hair/Border1";
 import HairBorder2 from "./hair/Border2";
@@ -104,6 +105,7 @@ export default function Border({
         2: EarringsBorder2,
         3: EarringsBorder3,
         4: EarringsBorder4,
+        6: EarringsBorder6,
       },
       hat: {
         1: HatBorder1,
