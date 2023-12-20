@@ -46,6 +46,8 @@ import HatBorder6 from "./hat/Border6";
 import HatBorder7 from "./hat/Border7";
 import MouthBorder11 from "./mouth/Border11";
 import NecklaceBorder3 from "./necklace/Border3";
+import NecklaceBorder4 from "./necklace/Border4";
+import NecklaceBorder6 from "./necklace/Border6";
 
 export default function Border({
   borderColor1,
@@ -117,6 +119,8 @@ export default function Border({
       },
       necklace: {
         3: NecklaceBorder3,
+        4: NecklaceBorder4,
+        6: NecklaceBorder6,
       },
     }),
     [],
