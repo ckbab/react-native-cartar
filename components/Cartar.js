@@ -29,7 +29,7 @@ export default function Cartar({
   beard,
   beardColor,
   earrings,
-  earringsColor = "#f00",
+  earringsColor = "#ff0000",
   eye,
   eyeColor = "#000",
   hair,
@@ -37,9 +37,9 @@ export default function Cartar({
   hat,
   hatColor = "#f00",
   mouth,
-  mouthColor = "#f00",
+  mouthColor = "#ff0000",
   necklace,
-  necklaceColor = "#f00",
+  necklaceColor = "#ff0000",
   shirt,
   shirtColor = "#ddd",
   shirtColorAlt = "#aaa",
@@ -87,6 +87,8 @@ export default function Cartar({
       eye1: eyeColor,
       eye2: changeColor(skinColorToUse, "#fff", 0.2),
       eye3: changeColor(skinColorToUse, "#fff", 0.4),
+      glass1: "rgba(255, 255, 255, 0.8)",
+      glass2: "rgba(255, 255, 255, 0.6)",
       hair1: hairColorToUse,
       hair2: changeColor(hairColorToUse, "#fff", 0.9),
       hair3: changeColor(hairColorToUse, "#000", 0.9),
@@ -170,6 +172,8 @@ export default function Cartar({
         eyeColor1={colors.eye1}
         eyeColor2={colors.eye2}
         eyeColor3={colors.eye3}
+        glassColor1={colors.glass1}
+        glassColor2={colors.glass2}
         skinColor1={colors.skin1}
         skinColor2={colors.skin2}
         type={eye}
