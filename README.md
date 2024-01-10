@@ -16,6 +16,8 @@ This package depends on `react-native-svg` so you need to install it as well.
 ![](https://cartar.io/?hair=2&eye=2&mouth=3&beard=2&shirt=6&skin-color=3&hair-color=5&beard-color=4&shirt-color=e84118&shirt-color-alt=fefefe&size=200)
 ![](https://cartar.io/?hair=9&eye=5&mouth=1&shirt=3&skin-color=7&hair-color=9&shirt-color=0984e3&shirt-color-alt=fefefe&size=200)
 
+Note that the examples above are fetched from the latest version of [cartar.io](https://cartar.io) so there might be a mismatch between that version and the version of this lib.
+
 ## Usage
 
 ```js
