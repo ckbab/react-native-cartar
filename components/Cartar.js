@@ -14,9 +14,13 @@ import {
 } from "../constants/colors";
 import Beard from "./beard/Beard";
 import Border from "./border/Border";
+import Crop from "./crop/Crop";
+import Earrings from "./earrings/Earrings";
 import Eye from "./eye/Eye";
 import Hair from "./hair/Hair";
+import Hat from "./hat/Hat";
 import Mouth from "./mouth/Mouth";
+import Necklace from "./necklace/Necklace";
 import Face from "./other/Face";
 import Throat from "./other/Throat";
 import Shirt from "./shirt/Shirt";
@@ -24,14 +28,22 @@ import Shirt from "./shirt/Shirt";
 export default function Cartar({
   beard,
   beardColor,
+  earrings,
+  earringsColor = "#f00",
   eye,
+  eyeColor = "#000",
   hair,
   hairColor,
+  hat,
+  hatColor = "#f00",
   mouth,
+  mouthColor = "#f00",
+  necklace,
+  necklaceColor = "#f00",
   shirt,
-  shirtColor,
-  shirtColorAlt,
-  size,
+  shirtColor = "#ddd",
+  shirtColorAlt = "#aaa",
+  size = 100,
   skinColor,
   style,
 }) {
@@ -62,7 +74,7 @@ export default function Cartar({
     const skinColorToUse = getDefaultColor(skinColor, defaultSkinColors);
     const beardColorToUse = getBeardColor(beardColor, skinColorToUse);
 
-    // Avoid shirt colors being null or undefined.
+    // Avoid colors being null or undefined.
     const shirtColorToUse = shirtColor || "#ddd";
     const shirtColorAltToUse = shirtColorAlt || "#aaa";
 
@@ -71,32 +83,45 @@ export default function Cartar({
       beard2: beardColorToUse,
       border1: outsideBorderColor,
       border2: insideBorderColor,
-      eye1: changeColor(skinColorToUse, "#000", 0.3),
-      eye2: changeColor(skinColorToUse, "#000", 0.2),
+      earrings: earringsColor,
+      eye1: eyeColor,
+      eye2: changeColor(skinColorToUse, "#fff", 0.2),
+      eye3: changeColor(skinColorToUse, "#fff", 0.4),
+      glass1: "rgba(255, 255, 255, 0.8)",
+      glass2: "rgba(255, 255, 255, 0.6)",
       hair1: hairColorToUse,
       hair2: changeColor(hairColorToUse, "#fff", 0.9),
       hair3: changeColor(hairColorToUse, "#000", 0.9),
-      mouth: changeColor(skinColorToUse, "#000", 0.6),
+      hat: hatColor,
+      mouth: mouthColor,
+      necklace: necklaceColor,
       shirt1: shirtColorToUse,
       shirt2: changeColor(shirtColorToUse, "#000", 0.9),
       shirt3: shirtColorAltToUse,
       shirt4: changeColor(shirtColorAltToUse, "#000", 0.9),
       skin1: skinColorToUse,
       skin2: changeColor(skinColorToUse, "#000", 0.9),
-      teeth: teethColor,
-      tongue1: tongueColor,
-      tongue2: changeColor(tongueColor, "#000", 0.8),
-      tongue3: changeColor(tongueColor, "#fff", 0.8),
+      teeth1: teethColor,
+      teeth2: changeColor(teethColor, "#000", 0.8),
+      tongue: tongueColor,
     };
   }, [
     beardColor,
+    earringsColor,
+    eyeColor,
     getBeardColor,
     getDefaultColor,
     hairColor,
+    hatColor,
+    mouthColor,
+    necklaceColor,
     shirtColor,
     shirtColorAlt,
     skinColor,
   ]);
+
+  // Need to use clip path, i.e. cut the hair, if a hat is used.
+  const clipPath = hat > 0 ? "url(#clip)" : null;
 
   return (
     <Svg
@@ -106,7 +131,16 @@ export default function Cartar({
       viewBox="0 0 0.666661 0.666661"
       width={size}
     >
-      <Border borderColor1={colors.border1} type={hair} />
+      <Crop hair={hair} hat={hat} />
+      <Border
+        borderColor1={colors.border1}
+        clipPath={clipPath}
+        earrings={earrings}
+        hair={hair}
+        hat={hat}
+        mouth={mouth}
+        necklace={necklace}
+      />
       <Shirt
         borderColor2={colors.border2}
         shirtColor1={colors.shirt1}
@@ -125,13 +159,24 @@ export default function Cartar({
         skinColor1={colors.skin1}
         skinColor2={colors.skin2}
       />
-      <Eye eyeColor1={colors.eye1} eyeColor2={colors.eye2} type={eye} />
       <Hair
         borderColor2={colors.border2}
+        clipPath={clipPath}
         hairColor1={colors.hair1}
         hairColor2={colors.hair2}
         hairColor3={colors.hair3}
         type={hair}
+      />
+      <Eye
+        borderColor2={colors.border2}
+        eyeColor1={colors.eye1}
+        eyeColor2={colors.eye2}
+        eyeColor3={colors.eye3}
+        glassColor1={colors.glass1}
+        glassColor2={colors.glass2}
+        skinColor1={colors.skin1}
+        skinColor2={colors.skin2}
+        type={eye}
       />
       <Beard
         beardColor1={colors.beard1}
@@ -140,11 +185,21 @@ export default function Cartar({
       />
       <Mouth
         mouthColor={colors.mouth}
-        teethColor={colors.teeth}
-        tongueColor1={colors.tongue1}
-        tongueColor2={colors.tongue2}
-        tongueColor3={colors.tongue3}
+        teethColor1={colors.teeth1}
+        teethColor2={colors.teeth2}
+        tongueColor={colors.tongue}
         type={mouth}
+      />
+      <Hat borderColor2={colors.border2} color={colors.hat} type={hat} />
+      <Earrings
+        borderColor2={colors.border2}
+        color={colors.earrings}
+        type={earrings}
+      />
+      <Necklace
+        borderColor2={colors.border2}
+        color={colors.necklace}
+        type={necklace}
       />
     </Svg>
   );
@@ -158,7 +213,7 @@ const checkLimit = (max, allowColor) => (props, propName, componentName) => {
     !(allowColor && isColor(value))
   ) {
     return new Error(
-      `Prop '${propName}' supplied to '${componentName}' needs to be between 0 and ${max}, got '${value}'.`
+      `Prop '${propName}' supplied to '${componentName}' needs to be between 0 and ${max}, got '${value}'.`,
     );
   }
 };
@@ -167,7 +222,7 @@ const checkColor = (props, propName, componentName) => {
   const value = props[propName];
   if (value && !isColor(value)) {
     return new Error(
-      `Prop '${propName}' supplied to '${componentName}' needs to a HEX color, got '${value}'.`
+      `Prop '${propName}' supplied to '${componentName}' needs to a HEX color, got '${value}'.`,
     );
   }
 };
@@ -175,29 +230,22 @@ const checkColor = (props, propName, componentName) => {
 Cartar.propTypes = {
   beard: checkLimit(10),
   beardColor: checkLimit(10, true),
-  eye: checkLimit(10),
-  hair: checkLimit(28),
+  earrings: checkLimit(7),
+  earringsColor: checkColor,
+  eye: checkLimit(18),
+  eyeColor: checkColor,
+  hair: checkLimit(32),
   hairColor: checkLimit(10, true),
-  mouth: checkLimit(10),
-  shirt: checkLimit(12),
+  hat: checkLimit(7),
+  hatColor: checkColor,
+  mouth: checkLimit(15),
+  mouthColor: checkColor,
+  necklace: checkLimit(6),
+  necklaceColor: checkColor,
+  shirt: checkLimit(19),
   shirtColor: checkColor,
   shirtColorAlt: checkColor,
   size: PropTypes.number,
   skinColor: checkLimit(8, true),
   style: PropTypes.any,
-};
-
-Cartar.defaultProps = {
-  beard: 0,
-  beardColor: 0,
-  eye: 0,
-  hair: 0,
-  hairColor: 0,
-  mouth: 0,
-  shirt: 0,
-  shirtColor: "#ddd",
-  shirtColorAlt: "#aaa",
-  size: 100,
-  skinColor: 0,
-  style: {},
 };

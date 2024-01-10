@@ -16,6 +16,8 @@ This package depends on `react-native-svg` so you need to install it as well.
 ![](https://cartar.io/?hair=2&eye=2&mouth=3&beard=2&shirt=6&skin-color=3&hair-color=5&beard-color=4&shirt-color=e84118&shirt-color-alt=fefefe&size=200)
 ![](https://cartar.io/?hair=9&eye=5&mouth=1&shirt=3&skin-color=7&hair-color=9&shirt-color=0984e3&shirt-color-alt=fefefe&size=200)
 
+Note that the examples above are fetched from the latest version of [cartar.io](https://cartar.io) so there might be a mismatch between that version and the version of this lib.
+
 ## Usage
 
 ```js
@@ -28,17 +30,25 @@ import Cartar from "@ckbab/react-native-cartar";
 
 | Name            | Type                 | Values   | Default value                                          |
 | --------------- | -------------------- | -------- | ------------------------------------------------------ |
-| `size`          | `number`             | -        | `100`                                                  |
-| `hair`          | `number`             | `0 - 28` | `0`                                                    |
-| `eye`           | `number`             | `0 - 10` | `0`                                                    |
-| `mouth`         | `number`             | `0 - 10` | `0`                                                    |
 | `beard`         | `number`             | `0 - 10` | `0`                                                    |
-| `shirt`         | `number`             | `0 - 12` | `0`                                                    |
-| `shirtColor`    | `string`             | -        | ![](https://via.placeholder.com/16/999/999.png) `#999` |
-| `shirtColorAlt` | `string`             | -        | ![](https://via.placeholder.com/16/666/666.png) `#666` |
-| `skinColor`     | `number` or `string` | `0-8`    | `0`                                                    |
-| `hairColor`     | `number` or `string` | `0-10`   | `0`                                                    |
 | `beardColor`    | `number` or `string` | `0-10`   | `0`                                                    |
+| `earrings`      | `number`             | `0 - 7`  | `0`                                                    |
+| `earringsColor` | `string`             | -        | ![](https://via.placeholder.com/16/f00/f00.png) `#f00` |
+| `eye`           | `number`             | `0 - 18` | `0`                                                    |
+| `eyeColor`      | `string`             | -        | ![](https://via.placeholder.com/16/000/000.png) `#000` |
+| `hair`          | `number`             | `0 - 32` | `0`                                                    |
+| `hairColor`     | `number` or `string` | `0-10`   | `0`                                                    |
+| `hat`           | `number`             | `0 - 7`  | `0`                                                    |
+| `hatColor`      | `string`             | -        | ![](https://via.placeholder.com/16/f00/f00.png) `#f00` |
+| `mouth`         | `number`             | `0 - 15` | `0`                                                    |
+| `mouthColor`    | `string`             | -        | ![](https://via.placeholder.com/16/f00/f00.png) `#f00` |
+| `necklace`      | `number`             | `0 - 6`  | `0`                                                    |
+| `necklaceColor` | `string`             | -        | ![](https://via.placeholder.com/16/f00/f00.png) `#f00` |
+| `shirt`         | `number`             | `0 - 19` | `0`                                                    |
+| `shirtColor`    | `string`             | -        | ![](https://via.placeholder.com/16/ddd/ddd.png) `#ddd` |
+| `shirtColorAlt` | `string`             | -        | ![](https://via.placeholder.com/16/aaa/aaa.png) `#aaa` |
+| `skinColor`     | `number` or `string` | `0-8`    | `0`                                                    |
+| `size`          | `number`             | -        | `100`                                                  |
 
 Note that `skinColor`, `hairColor` and `beardColor` support both predefined colors (e.g. 3) or custom colors (e.g. `#cc00ff`).
 

@@ -28,9 +28,14 @@ import Hair25 from "./Hair25";
 import Hair26 from "./Hair26";
 import Hair27 from "./Hair27";
 import Hair28 from "./Hair28";
+import Hair29 from "./Hair29";
+import Hair30 from "./Hair30";
+import Hair31 from "./Hair31";
+import Hair32 from "./Hair32";
 
 export default function Hair({
   borderColor2,
+  clipPath,
   hairColor1,
   hairColor2,
   hairColor3,
@@ -66,8 +71,12 @@ export default function Hair({
       Hair26,
       Hair27,
       Hair28,
+      Hair29,
+      Hair30,
+      Hair31,
+      Hair32,
     ],
-    []
+    [],
   );
 
   const Component = components[type - 1];
@@ -79,6 +88,7 @@ export default function Hair({
   return (
     <Component
       borderColor2={borderColor2}
+      clipPath={clipPath}
       hairColor1={hairColor1}
       hairColor2={hairColor2}
       hairColor3={hairColor3}

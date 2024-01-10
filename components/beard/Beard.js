@@ -26,7 +26,7 @@ export default function Beard({ beardColor1, beardColor2, type }) {
       Beard9,
       Beard10,
     ],
-    []
+    [],
   );
 
   const Component = components[type - 1];

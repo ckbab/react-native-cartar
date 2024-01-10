@@ -12,6 +12,13 @@ import Shirt9 from "./Shirt9";
 import Shirt10 from "./Shirt10";
 import Shirt11 from "./Shirt11";
 import Shirt12 from "./Shirt12";
+import Shirt13 from "./Shirt13";
+import Shirt14 from "./Shirt14";
+import Shirt15 from "./Shirt15";
+import Shirt16 from "./Shirt16";
+import Shirt17 from "./Shirt17";
+import Shirt18 from "./Shirt18";
+import Shirt19 from "./Shirt19";
 
 export default function Shirt({
   borderColor2,
@@ -35,8 +42,15 @@ export default function Shirt({
       Shirt10,
       Shirt11,
       Shirt12,
+      Shirt13,
+      Shirt14,
+      Shirt15,
+      Shirt16,
+      Shirt17,
+      Shirt18,
+      Shirt19,
     ],
-    []
+    [],
   );
 
   // Note we use Shirt1 as default since we always want to show a shirt.

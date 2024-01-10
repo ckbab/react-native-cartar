@@ -1,14 +1,15 @@
 import React from "react";
-import { Path } from "react-native-svg";
+import { G, Path } from "react-native-svg";
 
 export default function Hair8({
   borderColor2,
+  clipPath,
   hairColor1,
   hairColor2,
   hairColor3,
 }) {
   return (
-    <>
+    <G clipPath={clipPath} clipRule="evenodd">
       <Path
         d="M0.460697 0.214992c-0.0269961,-0.112854 -0.227575,-0.113083 -0.255264,-0.000677165 0.0468346,-0.0709685 0.207559,-0.0816772 0.255264,0.000677165z"
         fill={hairColor3}
@@ -25,6 +26,6 @@ export default function Hair8({
         d="M0.227177 0.157685c0,0 0.0396732,-0.044311 0.108728,-0.0429921 0.0690551,0.0013189 0.10289,0.0435512 0.10289,0.0435512 0,0 -0.0831693,-0.0611102 -0.211618,-0.000559055z"
         fill={hairColor2}
       />
-    </>
+    </G>
   );
 }
