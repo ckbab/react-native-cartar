@@ -159,14 +159,6 @@ export default function Cartar({
         skinColor1={colors.skin1}
         skinColor2={colors.skin2}
       />
-      <Hair
-        borderColor2={colors.border2}
-        clipPath={clipPath}
-        hairColor1={colors.hair1}
-        hairColor2={colors.hair2}
-        hairColor3={colors.hair3}
-        type={hair}
-      />
       <Eye
         borderColor2={colors.border2}
         eyeColor1={colors.eye1}
@@ -177,6 +169,14 @@ export default function Cartar({
         skinColor1={colors.skin1}
         skinColor2={colors.skin2}
         type={eye}
+      />
+      <Hair
+        borderColor2={colors.border2}
+        clipPath={clipPath}
+        hairColor1={colors.hair1}
+        hairColor2={colors.hair2}
+        hairColor3={colors.hair3}
+        type={hair}
       />
       <Beard
         beardColor1={colors.beard1}
