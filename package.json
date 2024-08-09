@@ -1,6 +1,6 @@
 {
   "name": "@ckbab/react-native-cartar",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "React Native wrapper for cartar.io images.",
   "main": "index.js",
   "scripts": {

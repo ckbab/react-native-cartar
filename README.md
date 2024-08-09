@@ -44,7 +44,7 @@ import Cartar from "@ckbab/react-native-cartar";
 | `mouthColor`    | `string`             | -        | ![](https://via.placeholder.com/16/f00/f00.png) `#f00` |
 | `necklace`      | `number`             | `0 - 6`  | `0`                                                    |
 | `necklaceColor` | `string`             | -        | ![](https://via.placeholder.com/16/f00/f00.png) `#f00` |
-| `shirt`         | `number`             | `0 - 19` | `0`                                                    |
+| `shirt`         | `number`             | `0 - 21` | `0`                                                    |
 | `shirtColor`    | `string`             | -        | ![](https://via.placeholder.com/16/ddd/ddd.png) `#ddd` |
 | `shirtColorAlt` | `string`             | -        | ![](https://via.placeholder.com/16/aaa/aaa.png) `#aaa` |
 | `skinColor`     | `number` or `string` | `0-8`    | `0`                                                    |

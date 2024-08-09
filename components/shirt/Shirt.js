@@ -19,6 +19,8 @@ import Shirt16 from "./Shirt16";
 import Shirt17 from "./Shirt17";
 import Shirt18 from "./Shirt18";
 import Shirt19 from "./Shirt19";
+import Shirt20 from "./Shirt20";
+import Shirt21 from "./Shirt21";
 
 export default function Shirt({
   borderColor2,
@@ -49,6 +51,8 @@ export default function Shirt({
       Shirt17,
       Shirt18,
       Shirt19,
+      Shirt20,
+      Shirt21,
     ],
     [],
   );

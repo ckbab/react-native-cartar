@@ -242,7 +242,7 @@ Cartar.propTypes = {
   mouthColor: checkColor,
   necklace: checkLimit(6),
   necklaceColor: checkColor,
-  shirt: checkLimit(19),
+  shirt: checkLimit(21),
   shirtColor: checkColor,
   shirtColorAlt: checkColor,
   size: PropTypes.number,
