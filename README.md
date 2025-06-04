@@ -36,7 +36,7 @@ import Cartar from "@ckbab/react-native-cartar";
 | `earringsColor` | `string`             | -        | ![](https://via.placeholder.com/16/f00/f00.png) `#f00` |
 | `eye`           | `number`             | `0 - 18` | `0`                                                    |
 | `eyeColor`      | `string`             | -        | ![](https://via.placeholder.com/16/000/000.png) `#000` |
-| `hair`          | `number`             | `0 - 32` | `0`                                                    |
+| `hair`          | `number`             | `0 - 36` | `0`                                                    |
 | `hairColor`     | `number` or `string` | `0-10`   | `0`                                                    |
 | `hat`           | `number`             | `0 - 7`  | `0`                                                    |
 | `hatColor`      | `string`             | -        | ![](https://via.placeholder.com/16/f00/f00.png) `#f00` |

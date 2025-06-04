@@ -1,4 +1,4 @@
-export const defaultHairColors = [
+export const DEFAULT_HAIR_COLORS = [
   "#f2e7c7",
   "#f2e1ae",
   "#f2da91",
@@ -11,7 +11,7 @@ export const defaultHairColors = [
   "#b06500",
 ];
 
-export const defaultSkinColors = [
+export const DEFAULT_SKIN_COLORS = [
   "#ffdbac",
   "#f1c27d",
   "#e0ac69",
@@ -22,12 +22,12 @@ export const defaultSkinColors = [
   "#422d1b",
 ];
 
-export const defaultColor = "#fefefe";
+export const DEFAULT_COLOR = "#fefefe";
 
-export const teethColor = "#fefefe";
+export const TEETH_COLOR = "#fefefe";
 
-export const tongueColor = "#f06288";
+export const TONGUE_COLOR = "#f06288";
 
-export const outsideBorderColor = "#fefefe";
+export const OUTSIDE_BORDER_COLOR = "#fefefe";
 
-export const insideBorderColor = "#000000";
+export const INSIDE_BORDER_COLOR = "#000000";
