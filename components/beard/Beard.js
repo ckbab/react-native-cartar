@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 
-import { defaultColor } from "../../constants/colors";
+import { DEFAULT_COLOR } from "../../constants/colors";
 import Beard1 from "./Beard1";
 import Beard2 from "./Beard2";
 import Beard3 from "./Beard3";
@@ -35,7 +35,7 @@ export default function Beard({ beardColor1, beardColor2, type }) {
     return null;
   }
 
-  if (beardColor2 === defaultColor) {
+  if (beardColor2 === DEFAULT_COLOR) {
     return null;
   }
 

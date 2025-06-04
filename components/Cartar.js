@@ -4,13 +4,13 @@ import React, { useCallback, useMemo } from "react";
 import { Svg } from "react-native-svg";
 
 import {
-  defaultColor,
-  defaultHairColors,
-  defaultSkinColors,
-  insideBorderColor,
-  outsideBorderColor,
-  teethColor,
-  tongueColor,
+  DEFAULT_COLOR,
+  DEFAULT_HAIR_COLORS,
+  DEFAULT_SKIN_COLORS,
+  INSIDE_BORDER_COLOR,
+  OUTSIDE_BORDER_COLOR,
+  TEETH_COLOR,
+  TONGUE_COLOR,
 } from "../constants/colors";
 import Beard from "./beard/Beard";
 import Border from "./border/Border";
@@ -66,12 +66,12 @@ export default function Cartar({
       return defaultColors[color - 1];
     }
 
-    return defaultColor;
+    return DEFAULT_COLOR;
   }, []);
 
   const colors = useMemo(() => {
-    const hairColorToUse = getDefaultColor(hairColor, defaultHairColors);
-    const skinColorToUse = getDefaultColor(skinColor, defaultSkinColors);
+    const hairColorToUse = getDefaultColor(hairColor, DEFAULT_HAIR_COLORS);
+    const skinColorToUse = getDefaultColor(skinColor, DEFAULT_SKIN_COLORS);
     const beardColorToUse = getBeardColor(beardColor, skinColorToUse);
 
     // Avoid colors being null or undefined.
@@ -81,8 +81,8 @@ export default function Cartar({
     return {
       beard1: changeColor(skinColorToUse, "#000", 0.9),
       beard2: beardColorToUse,
-      border1: outsideBorderColor,
-      border2: insideBorderColor,
+      border1: OUTSIDE_BORDER_COLOR,
+      border2: INSIDE_BORDER_COLOR,
       earrings: earringsColor,
       eye1: eyeColor,
       eye2: changeColor(skinColorToUse, "#fff", 0.2),
@@ -101,9 +101,9 @@ export default function Cartar({
       shirt4: changeColor(shirtColorAltToUse, "#000", 0.9),
       skin1: skinColorToUse,
       skin2: changeColor(skinColorToUse, "#000", 0.9),
-      teeth1: teethColor,
-      teeth2: changeColor(teethColor, "#000", 0.8),
-      tongue: tongueColor,
+      teeth1: TEETH_COLOR,
+      teeth2: changeColor(TEETH_COLOR, "#000", 0.8),
+      tongue: TONGUE_COLOR,
     };
   }, [
     beardColor,
